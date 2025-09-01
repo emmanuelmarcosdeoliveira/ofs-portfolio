@@ -1,7 +1,9 @@
 "use client";
+
 import Project from "@/models/project";
 import Autoplay from "embla-carousel-autoplay";
 import { CardProjects } from "../card-projects";
+
 
 import {
   Carousel,

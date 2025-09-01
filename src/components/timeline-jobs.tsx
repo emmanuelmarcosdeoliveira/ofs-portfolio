@@ -99,7 +99,9 @@ export function TimelineDemo() {
       content: (
         <Card className="dark:bg-muted/50 p-4 shadow-2xl">
           <CardHeader className="flex">
+
             <Image
+
               className="rounded-md shadow-xl"
               src="/logo-arcos.png"
               width={35}
@@ -181,6 +183,8 @@ export function TimelineDemo() {
               <CardDescription className="flex gap-2 items-center overflow-x-hidden">
                 <p>
                   Arcos Dourados - <strong>Mc Donald`&apos;s </strong>
+                  Arcos Dourados - <strong>Mc Donald's </strong>
+
                 </p>
               </CardDescription>
             </div>
