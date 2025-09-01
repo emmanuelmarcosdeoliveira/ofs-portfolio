@@ -17,7 +17,7 @@ export default function HeroSection() {
       <GridBackground />
 
       <div id="home" className="flex gap-4">
-        <div className="flex flex-col gap-6 lg:gap-4 mt-20">
+        <div className="flex flex-col gap-6 items-center justify-center lg:gap-4 mt-20 w-full">
           <div className="dark:text-primary flex flex-col font-bold gap-2 items-center justify-center text-center text-destructive text-lg">
             Desenvolvedor
             <span className="inline-flex justify-center">
@@ -34,10 +34,12 @@ export default function HeroSection() {
           <span className="-top-4 left-1 relative text-center text-muted-foreground/50 text-xs">
             &copy; Oliveirafullstack
           </span>
-          <div className="dark:text-foreground/50 max-sm:text-lg max-w-1/1 md:text-lg mx-auto text-2xl text-balance text-center tracking-wide">
-            Transformando necessidades em aplicações reais, evolventes e
-            funcionais, contribuindo com soluções inovadoras e eficazes ajudando
-            a solucionar desafios complexos.
+          <div className="dark:text-foreground/50">
+            <p className="lg:text-2xl max-w-5xl text-balance text-center text-lg">
+              Transformando necessidades em aplicações reais, evolventes e
+              funcionais, contribuindo com soluções inovadoras e eficazes
+              ajudando a solucionar desafios complexos.
+            </p>
           </div>
         </div>
       </div>
