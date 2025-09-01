@@ -43,7 +43,7 @@ export default function Menu() {
             className={
               pathname === "#contato" ? "text-primary" : "dark:text-white"
             }
-            href={"/#contato"}
+            href={"#contato"}
           >
             Contato
           </Link>

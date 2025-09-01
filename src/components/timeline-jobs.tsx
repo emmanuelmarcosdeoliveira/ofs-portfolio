@@ -34,7 +34,7 @@ export function TimelineDemo() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="flex gap-8 items-center max-sm:flex-col max-sm:gap-2 max-sm:items-start mb-4">
+            <div className=":flex-col flex gap-8 items-center max-md:flex-col max-md:gap-2 max-md:items-start mb-4">
               <div className="flex gap-2 items-center">
                 <Calendar size={16} />
                 <span className="text-muted-foreground text-sm">
@@ -75,9 +75,20 @@ export function TimelineDemo() {
               </li>
             </ul>
           </CardContent>
-          <CardFooter className="flex gap-2 items-center">
-            <Badge>liderança</Badge>
-            <Badge>trabalho em equipe</Badge>
+          <CardFooter className="flex flex-wrap gap-2 items-center">
+            <Badge className="bg-accent text-foreground">liderança</Badge>
+            <Badge className="bg-accent text-foreground">
+              trabalho em equipe
+            </Badge>
+            <Badge className="bg-accent text-foreground">
+              trabalho em equipe
+            </Badge>
+            <Badge className="bg-accent text-foreground">
+              trabalho em equipe
+            </Badge>
+            <Badge className="bg-accent text-foreground">
+              trabalho em equipe
+            </Badge>
           </CardFooter>
         </Card>
       ),
@@ -104,7 +115,7 @@ export function TimelineDemo() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="flex gap-8 items-center max-sm:flex-col max-sm:gap-2 max-sm:items-start mb-4">
+            <div className=":flex-col flex gap-8 items-center max-md:flex-col max-md:gap-2 max-md:items-start mb-4">
               <div className="flex gap-2 items-center">
                 <Calendar size={16} />
                 <span className="text-muted-foreground text-sm">
@@ -143,9 +154,11 @@ export function TimelineDemo() {
               </li>
             </ul>
           </CardContent>
-          <CardFooter className="flex gap-2 items-center">
-            <Badge>treinamento</Badge>
-            <Badge>gestão de equipes</Badge>
+          <CardFooter className="flex flex-wrap gap-2 items-center">
+            <Badge className="bg-accent text-foreground">treinamento</Badge>
+            <Badge className="bg-accent text-foreground">
+              gestão de equipes
+            </Badge>
           </CardFooter>
         </Card>
       ),
@@ -172,7 +185,7 @@ export function TimelineDemo() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="flex gap-8 items-center max-sm:flex-col max-sm:gap-2 max-sm:items-start mb-4">
+            <div className=":flex-col flex gap-8 items-center max-lg:flex-col max-lg:gap-2 max-lg:items-start mb-4">
               <div className="flex gap-2 items-center">
                 <Calendar size={16} />
                 <span className="text-muted-foreground text-sm">
@@ -207,9 +220,13 @@ export function TimelineDemo() {
               </li>
             </ul>
           </CardContent>
-          <CardFooter className="flex gap-2 items-center">
-            <Badge>gestão de vendas</Badge>
-            <Badge>gestão de pessoas</Badge>
+          <CardFooter className="flex flex-wrap gap-2 items-center">
+            <Badge className="bg-accent text-foreground">
+              gestão de vendas
+            </Badge>
+            <Badge className="bg-accent text-foreground">
+              gestão de pessoas
+            </Badge>
           </CardFooter>
         </Card>
       ),

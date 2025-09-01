@@ -37,7 +37,7 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
 
   return (
     <Carousel
-      className="max-sm:mt-12 max-sm:mx-auto max-sm:w-[300px] w-[630px]"
+      className="max-sm:mt-12 max-sm:mx-auto max-sm:w-[300px] md:w-[480px] w-[630px]"
       plugins={[
         Autoplay({
           delay: 4000,
@@ -45,7 +45,7 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
       ]}
       opts={{
         align: "start",
-        loop: false,
+        loop: true,
       }}
     >
       <div>

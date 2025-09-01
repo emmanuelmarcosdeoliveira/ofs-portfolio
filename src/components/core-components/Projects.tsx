@@ -8,7 +8,7 @@ import ProjectsList from "../ui/projects-list";
 export default function Projects() {
   return (
     <>
-      <section id="projetos" className="container h-auto mx-auto my-12 p-4">
+      <section id="projetos" className="container h-auto mx-auto my-6 p-4">
         <IntroSection title="Meus Projetos" />
         <div className="flex items-center justify-center">
           <div className="gap-4 grid grid-cols-2 max-lg:grid-cols-1 mx-6">

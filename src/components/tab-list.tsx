@@ -13,7 +13,7 @@ export default function Tablist() {
         <TabsTrigger value="fullstack">FullStack</TabsTrigger>
       </TabsList>
       <TabsContent value="full">
-        <div className="flex flex-wrap gap-8 justify-center overflow-hidden pt-8 rounded-md">
+        <div className="gap-8 grid justify-center lg:grid-cols-3 md:grid-cols-2 overflow-hidden pt-8 rounded-md">
           {projetos.map((proj) => (
             <div className="overflow-hidden rounded-lg" key={proj.slug}>
               <Image
@@ -24,8 +24,8 @@ export default function Tablist() {
                 src={proj.imageURL}
                 alt={proj.name}
               />
-              <h1 className="mb-2 text-2xl text-primary">{proj.name}</h1>
-              <p className="max-w-[360px] mt-2 truncate">{proj.description}</p>
+              <h1 className="text-2xl text-primary">{proj.name}</h1>
+              <p className="h-10 max-w-[360px] truncate">{proj.description}</p>
               <Button className="pt-4 px-0" variant={"link"} asChild>
                 <Link href={`/projeto/${proj.slug}`}>Saiba mais</Link>
               </Button>

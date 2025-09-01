@@ -12,12 +12,12 @@ import SplitText from "../ui/split-text";
 import { Spotlight } from "../ui/spotlight";
 export default function HeroSection() {
   return (
-    <section className="container h-screen mx-auto p-4">
-      <GridBackground />
+    <section className="container h-screen mx-auto p-4 py-10">
       <Spotlight />
+      <GridBackground />
 
       <div id="home" className="flex gap-4">
-        <div className="flex flex-col gap-6 mt-40">
+        <div className="flex flex-col gap-6 lg:gap-4 mt-20">
           <div className="dark:text-primary flex flex-col font-bold gap-2 items-center justify-center text-center text-destructive text-lg">
             Desenvolvedor
             <span className="inline-flex justify-center">
@@ -28,13 +28,13 @@ export default function HeroSection() {
             </span>{" "}
           </div>
           <SplitText
-            className="font-medium max-sm:text-4xl text-6xl text-primary"
+            className="font-medium max-sm:text-4xl md:text-5xl text-6xl text-primary"
             text="Emmanuel Oliveira"
           />
           <span className="-top-4 left-1 relative text-center text-muted-foreground/50 text-xs">
             &copy; Oliveirafullstack
           </span>
-          <div className="dark:text-foreground/50 max-sm:text-lg max-w-1/1 mx-auto text-2xl text-balance text-center tracking-wide">
+          <div className="dark:text-foreground/50 max-sm:text-lg max-w-1/1 md:text-lg mx-auto text-2xl text-balance text-center tracking-wide">
             Transformando necessidades em aplicações reais, evolventes e
             funcionais, contribuindo com soluções inovadoras e eficazes ajudando
             a solucionar desafios complexos.

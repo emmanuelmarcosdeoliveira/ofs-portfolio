@@ -51,7 +51,10 @@ export function CardProjects({
       </div>
       <CardHeader>
         {destaque === true && (
-          <Badge variant="default" className="bottom-0 relative shadow-md">
+          <Badge
+            variant="default"
+            className="bg-muted relative text-foreground"
+          >
             Destaque
           </Badge>
         )}

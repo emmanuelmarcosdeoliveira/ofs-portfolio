@@ -10,6 +10,7 @@ import { Button } from "./ui/button";
 
 export default function Footer() {
   const { theme } = useTheme();
+  const currentYear: number = new Date().getFullYear();
   return (
     <section className="bg-muted py-4 relative">
       <div className="-top-6 -translate-x-1/2 absolute flex justify-center left-1/2">
@@ -120,7 +121,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="border-black/20 border-t-1 pt-4 text-center text-xs">
-        &copy; Oliveirafullstack - todos os direitos reservados
+        &copy; Oliveirafullstack - todos os direitos reservados - {currentYear}
       </p>
     </section>
   );

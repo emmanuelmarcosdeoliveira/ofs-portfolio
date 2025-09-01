@@ -34,7 +34,7 @@ export default async function Project({ params }: ProjectProps) {
         />
       </div>
       <div className="container mx-auto p-4">
-        <div className="flex flex-col gap-8 items-start justify-center">
+        <div className="flex flex-col gap-2 items-start justify-center">
           <IntroSection title="Projeto" />
           <h1 className="font-serif text-2xl text-center text-primary">
             {projeto.name}

@@ -4,7 +4,7 @@ interface IntroSectionProps {
 
 export function IntroSection({ title }: IntroSectionProps) {
   return (
-    <h1 className="py-6 text-lg text-primary">
+    <h1 className="text-lg text-primary">
       <strong className="font-light text-muted-foreground">{"<"}</strong>
       {title}{" "}
       <strong className="font-light text-muted-foreground">{"/>"}</strong>
