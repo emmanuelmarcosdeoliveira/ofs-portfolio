@@ -1,7 +1,13 @@
 import Tablist from "@/components/tab-list";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Portfolio Emmanuel Oliveira | Projetos",
+  description: "Página de Projetos de Emmanuel Oliveira | OFS",
+};
 
 export default function Projetos() {
   return (

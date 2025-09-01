@@ -16,8 +16,34 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Emmanuel Oliveira | OFS ",
-  description: "Portfolio do desenvolvedor Emmanuel Oliveira",
+  title: "Portfolio Emmanuel Oliveira | OFS",
+  description:
+    "Portfolio Emmanuel Oliveira | OFS, confira os meus projetos e habilidades",
+  openGraph: {
+    title: "Portfolio Emmanuel Oliveira | OFS",
+    description: "Projetos e habilidades de Emmanuel Oliveira",
+    url: "https://portfolio.ofs.dev.br",
+    siteName: "Portfolio Emmanuel Oliveira | OFS",
+    images: [
+      {
+        url: "https://res.cloudinary.com/delo0gvyb/image/upload/v1756694533/ofs-portfolio_o4fwoi.png",
+        width: 1200,
+        height: 630,
+        alt: "Imagem do portfolio Emmanuel Oliveira",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio Emmanuel Oliveira | OFS",
+    description: "Projetos e habilidades de Emmanuel Oliveira",
+    images: [
+      "https://res.cloudinary.com/delo0gvyb/image/upload/v1756694533/ofs-portfolio_o4fwoi.png",
+    ],
+    creator: "@Emmanuel_0501", // opcional
+  },
 };
 
 export default function RootLayout({

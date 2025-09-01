@@ -1,11 +1,17 @@
-import IntroSection from "@/components/intro-section";
+import { IntroSection } from "@/components/intro-section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { projetos } from "@/constants/projects";
 import { ArrowRight, Github, Link as Li } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+export const metadata: Metadata = {
+  title: "Portfolio Emmanuel Oliveira | Projeto",
+  description: "Página de descrição dos Projetos de Emmanuel Oliveira | OFS",
+};
 interface ProjectProps {
   params: {
     slug: string;
@@ -26,10 +32,6 @@ export default async function Project({ params }: ProjectProps) {
           src={projeto.images[0]}
           alt={projeto.name}
         />
-        {/* <div className="absolute bg-black/20 inset-0 z-20"></div> */}
-        {/* <p className="-translate-x-1/2 -translate-y-1/2 absolute font-serif left-1/2 text-6xl text-white top-1/2 z-30">
-          {projeto.name}
-        </p> */}
       </div>
       <div className="container mx-auto p-4">
         <div className="flex flex-col gap-8 items-start justify-center">
