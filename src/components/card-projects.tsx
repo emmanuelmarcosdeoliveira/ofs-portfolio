@@ -31,11 +31,7 @@ export function CardProjects({
   name,
   description,
   imageURL,
-  online,
-  gitHub,
   destaque,
-  images,
-  type,
   technologies,
 }: CardProductsProps) {
   return (
