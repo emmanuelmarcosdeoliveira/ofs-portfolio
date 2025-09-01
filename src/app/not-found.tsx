@@ -11,7 +11,7 @@ const NotFound = () => {
         404
       </h1>
       <strong className="text-muted-foreground">
-        Ops`&apos;s essa página não existe
+        Ops&apos;s essa página não existe
       </strong>
       <div className="flex gap-4 items-center justify-center">
         <Button>

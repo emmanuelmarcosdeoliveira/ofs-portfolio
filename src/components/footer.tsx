@@ -2,6 +2,7 @@
 
 import { ArrowUp } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
@@ -24,7 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-4 items-center justify-items-center max-sm:grid-cols-2">
           <div>
             <Link className="flex font-sans items-center" href="/">
-              <img
+              <Image
                 suppressHydrationWarning
                 className="dark:text-white"
                 src={theme === "dark" ? "/ofs-light.svg" : "/ofs-dark.svg"}
