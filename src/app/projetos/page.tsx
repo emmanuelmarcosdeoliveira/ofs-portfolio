@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Projetos() {
   return (
     <section className="container mx-auto p-4 py-16">
-      <h1 className="font-serif max-sm:text-left max-sm:text-xl max-w-4xl mx-auto pt-24 text-2xl text-balance text-center text-muted-foreground">
+      <h1 className="max-sm:text-left max-sm:text-xl max-w-4xl mx-auto pt-24 text-2xl text-balance text-center text-muted-foreground">
         Aqui você poderá ver alguns dos trabalhos que desenvolvi. Navegue a
         vontade explore os projetos para ver como foram criados, as tecnologias
         utilizadas e as funcionalidades implementadas{" "}
