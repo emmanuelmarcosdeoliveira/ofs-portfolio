@@ -12,14 +12,17 @@ export const metadata: Metadata = {
   title: "Portfolio Emmanuel Oliveira | Projeto",
   description: "Página de descrição dos Projetos de Emmanuel Oliveira | OFS",
 };
+
 interface ProjectProps {
   params: {
     slug: string;
   };
 }
-export default async function Project({ params }: ProjectProps) {
-  const { slug } = await params;
+
+export default function Project({ params }: ProjectProps) {
+  const { slug } = params; // sem await
   const projeto = projetos.find((p) => p.slug === slug);
+
   if (!projeto) return notFound();
 
   return (
@@ -62,8 +65,8 @@ export default async function Project({ params }: ProjectProps) {
             Abaixo as tecnologias que foram usadas nesse projeto
           </p>
           <div className="flex flex-wrap gap-2 h-auto mt-4">
-            {projeto.technologies.map((proj, index) => (
-              <Badge key={index}>{proj}</Badge>
+            {projeto.technologies.map((tech, index) => (
+              <Badge key={index}>{tech}</Badge>
             ))}
           </div>
           <Button className="mt-8">
