@@ -79,16 +79,14 @@ export function TimelineDemo() {
           <CardFooter className="flex flex-wrap gap-2 items-center">
             <Badge className="bg-accent text-foreground">liderança</Badge>
             <Badge className="bg-accent text-foreground">
+              gestão de vendas
+            </Badge>
+            <Badge className="bg-accent text-foreground">Treinamento</Badge>
+            <Badge className="bg-accent text-foreground">
               gestão operacional
             </Badge>
             <Badge className="bg-accent text-foreground">
-              gestão de vendas
-            </Badge>
-            <Badge className="bg-accent text-foreground">
               resolução de problemas
-            </Badge>
-            <Badge className="bg-accent text-foreground">
-              contratação de pessoal
             </Badge>
           </CardFooter>
         </Card>
@@ -161,10 +159,10 @@ export function TimelineDemo() {
               gestão de equipes
             </Badge>
             <Badge className="bg-accent text-foreground">
-              gestão de vendas
+              gestão de Vendas
             </Badge>
             <Badge className="bg-accent text-foreground">
-              gestão de inventário
+              controle de inventário
             </Badge>
           </CardFooter>
         </Card>

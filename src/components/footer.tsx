@@ -25,9 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-4 items-center justify-items-center max-sm:grid-cols-2">
           <div>
             <Link className="flex font-sans items-center" href="/">
-
               <Image
-
                 suppressHydrationWarning
                 className="dark:text-white"
                 src={theme === "dark" ? "/ofs-light.svg" : "/ofs-dark.svg"}
@@ -64,7 +62,7 @@ export default function Footer() {
                 <Link
                   className="size-10"
                   target="_blank"
-                  href="https://www.instagram.com/oliveirafullstack/"
+                  href="https://wa.me/5511968336094?text=Olá,%20gostaria%20de%20saber%20mais%20informações!"
                 >
                   <FaWhatsapp className="fill-primary size-6" />
                 </Link>
