@@ -1,6 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeSwitchMenu } from "./provider/switch-theme";
@@ -13,7 +14,7 @@ export default function Menu() {
       <div className="backdrop-blur-sm border-1 dark:border-white/30 flex h-12 items-center justify-between max-md:px-1 max-md:w-sm px-2 rounded-xl w-3xl">
         <div>
           <Link className="flex font-sans items-center" href="/">
-            <img
+            <Image
               suppressHydrationWarning
               className="dark:text-white"
               src={theme === "dark" ? "/ofs-light.svg" : "/ofs-dark.svg"}

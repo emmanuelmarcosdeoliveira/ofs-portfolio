@@ -1,5 +1,6 @@
 import { Timeline } from "@/components/ui/timeline";
 import { Calendar, Clock, MapPinned } from "lucide-react";
+import Image from "next/image";
 import { Badge } from "./ui/badge";
 import {
   Card,
@@ -17,7 +18,7 @@ export function TimelineDemo() {
       content: (
         <Card className="dark:bg-muted/50 p-4 shadow-2xl">
           <CardHeader className="flex">
-            <img
+            <Image
               className="rounded-md shadow-xl"
               src="/logo-arcos.png"
               width={35}
@@ -28,7 +29,7 @@ export function TimelineDemo() {
               <CardTitle>Gerente de Negócios</CardTitle>
               <CardDescription className="flex gap-2 items-center overflow-x-hidden">
                 <p>
-                  Arcos Dourados - <strong>Mc Donald's </strong>
+                  Arcos Dourados - <strong>Mc Donald &apos;s </strong>
                 </p>
               </CardDescription>
             </div>
@@ -98,7 +99,7 @@ export function TimelineDemo() {
       content: (
         <Card className="dark:bg-muted/50 p-4 shadow-2xl">
           <CardHeader className="flex">
-            <img
+            <Image
               className="rounded-md shadow-xl"
               src="/logo-arcos.png"
               width={35}
@@ -109,7 +110,7 @@ export function TimelineDemo() {
               <CardTitle>Gerente Assistente</CardTitle>
               <CardDescription className="flex gap-2 items-center overflow-x-hidden">
                 <p>
-                  Arcos Dourados - <strong>Mc Donald's </strong>
+                  Arcos Dourados - <strong>Mc Donald &apos;s </strong>
                 </p>
               </CardDescription>
             </div>
@@ -168,7 +169,7 @@ export function TimelineDemo() {
       content: (
         <Card className="dark:bg-muted/50 p-4 shadow-2xl">
           <CardHeader className="flex">
-            <img
+            <Image
               className="rounded-md shadow-xl"
               src="/logo-arcos.png"
               width={35}
@@ -179,7 +180,7 @@ export function TimelineDemo() {
               <CardTitle>Gerente de Plantão</CardTitle>
               <CardDescription className="flex gap-2 items-center overflow-x-hidden">
                 <p>
-                  Arcos Dourados - <strong>Mc Donald's </strong>
+                 Arcos Dourados - <strong>Mc Donald &apos;s </strong>
                 </p>
               </CardDescription>
             </div>

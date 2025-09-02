@@ -90,13 +90,9 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         setPathD(d);
       }
     };
+      const resizeObserver = new ResizeObserver(() => {
+      updatePath();
 
-    // Initialize ResizeObserver
-    const resizeObserver = new ResizeObserver((entries) => {
-      // For all entries, recalculate the path
-      for (let entry of entries) {
-        updatePath();
-      }
     });
 
     // Observe the container element

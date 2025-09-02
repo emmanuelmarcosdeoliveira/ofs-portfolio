@@ -1,10 +1,10 @@
 "use client";
-import { type CarouselApi } from "@/components/ui/carousel";
+
 import Project from "@/models/project";
 import Autoplay from "embla-carousel-autoplay";
 import { CardProjects } from "../card-projects";
 
-import React from "react";
+
 import {
   Carousel,
   CarouselContent,
@@ -18,23 +18,6 @@ interface ProjectsListProps {
 }
 
 export default function ProjectsList({ projects }: ProjectsListProps) {
-  const [api, setApi] = React.useState<CarouselApi>();
-  const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState(0);
-
-  React.useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api]);
-
   return (
     <Carousel
       className="max-sm:mt-12 max-sm:mx-auto max-sm:w-[300px] md:w-[480px] w-[630px]"
