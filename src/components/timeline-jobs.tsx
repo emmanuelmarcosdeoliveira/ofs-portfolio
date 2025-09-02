@@ -79,16 +79,16 @@ export function TimelineDemo() {
           <CardFooter className="flex flex-wrap gap-2 items-center">
             <Badge className="bg-accent text-foreground">liderança</Badge>
             <Badge className="bg-accent text-foreground">
-              trabalho em equipe
+              gestão operacional
             </Badge>
             <Badge className="bg-accent text-foreground">
-              trabalho em equipe
+              gestão de vendas
             </Badge>
             <Badge className="bg-accent text-foreground">
-              trabalho em equipe
+              resolução de problemas
             </Badge>
             <Badge className="bg-accent text-foreground">
-              trabalho em equipe
+              contratação de pessoal
             </Badge>
           </CardFooter>
         </Card>
@@ -160,6 +160,12 @@ export function TimelineDemo() {
             <Badge className="bg-accent text-foreground">
               gestão de equipes
             </Badge>
+            <Badge className="bg-accent text-foreground">
+              gestão de vendas
+            </Badge>
+            <Badge className="bg-accent text-foreground">
+              gestão de inventário
+            </Badge>
           </CardFooter>
         </Card>
       ),
@@ -180,7 +186,7 @@ export function TimelineDemo() {
               <CardTitle>Gerente de Plantão</CardTitle>
               <CardDescription className="flex gap-2 items-center overflow-x-hidden">
                 <p>
-                 Arcos Dourados - <strong>Mc Donald &apos;s </strong>
+                  Arcos Dourados - <strong>Mc Donald &apos;s </strong>
                 </p>
               </CardDescription>
             </div>
@@ -228,6 +234,7 @@ export function TimelineDemo() {
             <Badge className="bg-accent text-foreground">
               gestão de pessoas
             </Badge>
+            <Badge className="bg-accent text-foreground">treinamento</Badge>
           </CardFooter>
         </Card>
       ),
