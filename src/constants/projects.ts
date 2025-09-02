@@ -57,7 +57,7 @@ export const projetos: Project[] = [
     imageURL:
       "https://res.cloudinary.com/delo0gvyb/image/upload/v1755932722/refund_tp2wfb.png",
     images: [
-      "https://res.cloudinary.com/delo0gvyb/image/upload/v1755985073/agentsTablet_svxtin.png",
+      "https://res.cloudinary.com/delo0gvyb/image/upload/v1756782307/refund-tablet_ibhirh.png",
     ],
     onLine: "https://refund-sigma.vercel.app/",
     gitHub: "https://github.com/emmanuelmarcosdeoliveira/refund",
