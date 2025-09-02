@@ -2,7 +2,7 @@ import { GridBackground } from "@/components/ui/grid-background";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio Emmanuel Oliveira | Curriculum",
+  title: "OFS | Curriculum",
   description: "Página de curriculum de Emmanuel Oliveira | OFS",
 };
 

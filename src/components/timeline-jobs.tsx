@@ -180,7 +180,7 @@ export function TimelineDemo() {
               <CardTitle>Gerente de Plantão</CardTitle>
               <CardDescription className="flex gap-2 items-center overflow-x-hidden">
                 <p>
-                  Arcos Dourados - <strong>Mc Donald &apos;s </strong>
+                 Arcos Dourados - <strong>Mc Donald &apos;s </strong>
                 </p>
               </CardDescription>
             </div>

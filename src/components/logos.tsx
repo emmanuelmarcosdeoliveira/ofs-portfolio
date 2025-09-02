@@ -29,7 +29,6 @@ const techLogos = [
     href: "https://tailwindcss.com",
   },
 ];
-
 export default function LogoLoopExample() {
   return (
     <div style={{ height: "120px", position: "relative", overflow: "hidden" }}>

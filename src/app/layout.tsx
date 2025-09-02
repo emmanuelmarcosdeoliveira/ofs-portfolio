@@ -16,7 +16,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Emmanuel Oliveira | OFS",
+  title: "OFS | Home",
   description:
     "Portfolio Emmanuel Oliveira | OFS, confira os meus projetos e habilidades",
   openGraph: {

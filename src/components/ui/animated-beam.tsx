@@ -90,10 +90,9 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         setPathD(d);
       }
     };
-
-    // Initialize ResizeObserver
-    const resizeObserver = new ResizeObserver(() => {
+      const resizeObserver = new ResizeObserver(() => {
       updatePath();
+
     });
 
     // Observe the container element

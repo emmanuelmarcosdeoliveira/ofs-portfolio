@@ -25,7 +25,9 @@ export default function Footer() {
         <div className="grid grid-cols-4 items-center justify-items-center max-sm:grid-cols-2">
           <div>
             <Link className="flex font-sans items-center" href="/">
+
               <Image
+
                 suppressHydrationWarning
                 className="dark:text-white"
                 src={theme === "dark" ? "/ofs-light.svg" : "/ofs-dark.svg"}
