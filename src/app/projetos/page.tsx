@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Portfolio Emmanuel Oliveira | Projetos",
+  title: "OFS | Projetos",
   description: "Página de Projetos de Emmanuel Oliveira | OFS",
 };
 

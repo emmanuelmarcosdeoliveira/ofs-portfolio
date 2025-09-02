@@ -9,7 +9,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Portfolio Emmanuel Oliveira | Projeto",
+  title: "OFS | Projeto",
   description: "Página de descrição dos Projetos de Emmanuel Oliveira | OFS",
 };
 interface ProjectProps {
