@@ -5,8 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeSwitchMenu } from "./provider/switch-theme";
+import { linksMenu } from "@/constants/menu";
 
 export default function Menu() {
+  console.log(linksMenu.pages);
   const { theme } = useTheme();
   const pathname = usePathname();
   return (
@@ -26,38 +28,17 @@ export default function Menu() {
           </Link>
         </div>
         <nav className="*:hover:text-muted-foreground *:p-1 flex gap-4 items-center max-sm:text-[13px] text-sm transition-all">
-          <Link
-            className={pathname === "/" ? "text-primary" : "dark:text-white"}
-            href={"/"}
-          >
-            Home
-          </Link>
-          <Link
-            className={
-              pathname === "/projetos" ? "text-primary" : "dark:text-white"
-            }
-            href={"/projetos"}
-          >
-            Projetos
-          </Link>
-          <Link
-            className={
-              pathname === "#contato" ? "text-primary" : "dark:text-white"
-            }
-            href={"#contato"}
-          >
-            Contato
-          </Link>
-          <Link
-            href={"/curriculum"}
-            className={
-              pathname === "/curriculum"
-                ? "text-primary  bg-transparent border-1 border-white/50 px-2 py-1 rounded-md"
-                : "text-muted   dark:bg-white/90 bg-black px-2 py-1 rounded-md"
-            }
-          >
-            Curriculum
-          </Link>
+          {linksMenu.pages.map((page) => (
+            <Link
+              key={page.id}
+              className={
+                pathname === `${page.href}` ? "text-primary" : "dark:text-white"
+              }
+              href={page.href}
+            >
+              {page.name}
+            </Link>
+          ))}
         </nav>
         <div className="pt-1">
           <ThemeSwitchMenu />

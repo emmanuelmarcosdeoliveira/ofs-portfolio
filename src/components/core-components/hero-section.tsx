@@ -4,69 +4,75 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { VscGithubAlt } from "react-icons/vsc";
-import { AnimatedBeamDemo } from "../ui/anima-icons";
 import { Button } from "../ui/button";
 import { ContainerTextFlip } from "../ui/container-text-flip";
 import { GridBackground } from "../ui/grid-background";
 import SplitText from "../ui/split-text";
 import { Spotlight } from "../ui/spotlight";
+import { DiCss3 } from "react-icons/di";
+import {
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiTailwindcss,
+} from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
+import AnimateIcons from "../animate-icons";
 export default function HeroSection() {
   return (
-    <section className="container h-screen mx-auto p-4 py-10">
+    <section id="home" className="container   h-screen mx-auto p-4">
+      <AnimateIcons />
       <Spotlight />
-      <GridBackground />
 
-      <div id="home" className="flex gap-4">
-        <div className="flex flex-col gap-6 items-center justify-center lg:gap-4 mt-20 w-full">
-          <div className="dark:text-primary flex flex-col font-bold gap-2 items-center justify-center text-center text-destructive text-lg">
-            Desenvolvedor
-            <span className="inline-flex justify-center">
-              {" "}
-              <ContainerTextFlip
-                words={["Front-end", "Back-end", "Full-stack"]}
-              />
-            </span>{" "}
-          </div>
-          <SplitText
-            className="font-medium max-sm:text-4xl md:text-5xl text-6xl text-primary"
-            text="Emmanuel Oliveira"
-          />
-          <span className="-top-4 left-1 relative text-center text-muted-foreground/50 text-xs">
-            &copy; Oliveirafullstack
-          </span>
-          <div className="dark:text-foreground/50">
-            <p className="lg:text-2xl max-w-5xl text-balance text-center text-lg">
-              Transformando necessidades em aplicações reais, evolventes e
-              funcionais, contribuindo com soluções inovadoras e eficazes
-              ajudando a solucionar desafios complexos.
-            </p>
-          </div>
+      <div className="flex animate-fade-in-intro flex-col gap-6 lg:gap-4 mt-40 w-full">
+        <div className="dark:text-primary flex flex-col font-bold gap-2 items-center justify-center text-center text-destructive text-lg">
+          Desenvolvedor
+          <span className="inline-flex justify-center">
+            {" "}
+            <ContainerTextFlip words={["Front-end", "Back-end"]} />
+          </span>{" "}
+        </div>
+        <SplitText
+          className=" text-primary  font-semibold font-serif max-sm:text-4xl md:text-7xl"
+          text="Emmanuel Oliveira"
+        />
+        <span className="-top-4 left-1 relative text-center text-muted-foreground/50 text-xs">
+          &copy; Oliveirafullstack
+        </span>
+        <div className="dark:text-foreground/50">
+          <p className="lg:text-2xl font-medium text-transparent bg-gradient-to-r dark:from-cyan-500 from-gray-900 via-orange-300 dark:via-cyan-100 dark:to-cyan-300 to-gray-600 bg-clip-text animate-gradient animate-fade-in-scale lg:text-balance max-sm:text-xl max-w-6xl mx-auto text-center text-xl">
+            Transformando necessidades em aplicações reais, evolventes e
+            funcionais, contribuindo com soluções inovadoras e eficazes ajudando
+            a solucionar desafios complexos.
+          </p>
         </div>
       </div>
-      <div className="cursor-pointer flex gap-6 items-center justify-center mt-4">
+
+      <div className="*:p-2 cursor-pointer flex gap-2 justify-center mt-4">
         <Link
           target="_blank"
           href="https://wa.me/5511968336094?text=Olá%2C%20gostaria%20de%20mais%20informações."
         >
-          <FaWhatsapp className="animate-wiggle fill-primary hover:fill-primary/50 size-6" />
+          <FaWhatsapp className="animate-float fill-primary hover:fill-primary/50 size-6" />
         </Link>
         <Link href="mailto:oliveira.frontend@gmail.com">
-          <MdAlternateEmail className="animate-wiggle fill-primary hover:fill-primary/50 size-6" />
+          <MdAlternateEmail className="animate-float fill-primary hover:fill-primary/50 size-6" />
         </Link>
         <Link
           href="https://www.linkedin.com/in/oliveira-emmanuel/"
           target="_blank"
         >
-          <SlSocialLinkedin className="animate-wiggle fill-primary hover:fill-primary/50 size-6" />
+          <SlSocialLinkedin className="animate-float fill-primary hover:fill-primary/50 size-6" />
         </Link>
         <Link
           href="https://github.com/emmanuelmarcosdeoliveira"
           target="_blank"
         >
-          <VscGithubAlt className="animate-wiggle fill-primary hover:fill-primary/50 size-6" />
+          <VscGithubAlt className="animate-float fill-primary hover:fill-primary/50 size-6" />
         </Link>
       </div>
-      <div className="flex gap-4 items-center justify-center pt-4">
+      <div className="flex gap-4 items-center justify-center pt-8">
         <Button variant={"outline"} asChild>
           <Link href="/emmanuel-oliveira.pdf" target="_blank" download>
             Curriculum
@@ -74,14 +80,14 @@ export default function HeroSection() {
           </Link>
         </Button>
         <Button asChild>
-          <Link href="#projetos">
+          <Link href="/projetos">
             Projetos
             <MoveUpRight />
           </Link>
         </Button>
       </div>
 
-      <AnimatedBeamDemo />
+      {/* <AnimatedBeamDemo /> */}
     </section>
   );
 }

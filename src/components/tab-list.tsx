@@ -12,8 +12,11 @@ export default function Tablist() {
         <TabsTrigger value="frontend">Front-end</TabsTrigger>
         <TabsTrigger value="fullstack">FullStack</TabsTrigger>
       </TabsList>
+      <p className="-pt-1 text-center text-muted-foreground text-sm">
+        Filtre por tecnologias ou explore todos os projetos
+      </p>
       <TabsContent value="full">
-        <div className="gap-8 grid justify-center lg:grid-cols-3 md:grid-cols-2 overflow-hidden pt-8 rounded-md">
+        <div className="gap-4 grid justify-items-center lg:grid-cols-3 md:grid-cols-2 overflow-hidden pt-8 rounded-md">
           {projetos.map((proj) => (
             <div className="overflow-hidden rounded-lg" key={proj.slug}>
               <Image
@@ -25,7 +28,9 @@ export default function Tablist() {
                 alt={proj.name}
               />
               <h1 className="text-2xl text-primary">{proj.name}</h1>
-              <p className="h-10 max-w-[360px] truncate">{proj.description}</p>
+              <div className="h-12 line-clamp-2 overflow-hidden">
+                <p className="max-w-[360px]">{proj.description}</p>
+              </div>
               <Button className="pt-4 px-0" variant={"link"} asChild>
                 <Link href={`/projeto/${proj.slug}`}>Saiba mais</Link>
               </Button>

@@ -29,14 +29,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="bg-muted dark:bg-background font-sans md:px-10 mt-10 overflow-hidden rounded-2xl shadow-sm w-full"
+      className="bg-muted dark:bg-muted/20  md:px-10 mt-10 overflow-hidden rounded-2xl shadow-sm w-full"
       ref={containerRef}
     >
-      <div className="font-serif lg:px-10 max-sm:py-6 max-w-7xl md:px-8 mx-auto px-4 py-10">
-        <h2 className="dark:text-white font-sans max-w-4xl mb-4 md:text-4xl text-lg text-primary">
+      <div className="lg:px-10 max-sm:py-6 max-w-7xl md:px-8 mx-auto px-4 py-10">
+        <h2 className="dark:text-white font-serif max-w-4xl mb-4 md:text-4xl text-lg text-primary">
           Minhas Experiências de Trabalho
         </h2>
-        <p className="!text-xl dark:text-neutral-300 font-sans max-w-sm md:text-base text-neutral-700">
+        <p className="!text-xl dark:text-neutral-300 max-w-sm md:text-base text-neutral-700">
           Veja minhas experiências de trabalho, minhas qualificações e minhas
           habilidades.
         </p>
@@ -52,7 +52,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="absolute bg-primary dark:bg-black flex h-10 items-center justify-center left-3 max-sm:hidden md:left-3 rounded-full w-10">
                 <div className="bg-neutral-200 border border-neutral-300 dark:bg-primary dark:border-primary h-4 max-sm:hidden p-2 rounded-full w-4" />
               </div>
-              <h3 className="dark:text-primary font-bold hidden max-sm:hidden md:block md:pl-20 md:text-3xl text-neutral-500 text-xl">
+              <h3 className="dark:text-primary font-semibold font-serif hidden max-sm:hidden md:block md:pl-20 md:text-3xl text-neutral-500 text-xl">
                 {item.title}
               </h3>
             </div>
@@ -76,7 +76,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute bg-gradient-to-t dark:from-purple-500 dark:via-blue-500 from-[0%] from-amber-700 inset-x-0 max-sm:hidden rounded-full to-transparent top-0 via-[10%] via-amber-300 w-[2px]"
+            className="absolute bg-gradient-to-t dark:from-cyan-100 dark:via-cyan-300 from-[0%] from-amber-700 inset-x-0 max-sm:hidden rounded-full to-transparent top-0 via-[10%] via-amber-300 w-[2px]"
           />
         </div>
       </div>

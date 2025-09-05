@@ -248,9 +248,9 @@ export const LogoLoop: React.FC<LogoLoopProps> = ({
         "node" in item ? (
           <span
             className={cx(
-              "inline-flex items-center motion-reduce:transition-none",
+              "flex flex-col items-center border border-muted-foreground/50 rounded-lg p-2 motion-reduce:transition-none",
               scaleOnHover &&
-                "transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-120"
+                "transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-110"
             )}
             aria-hidden={!!item.href && !item.ariaLabel}
           >

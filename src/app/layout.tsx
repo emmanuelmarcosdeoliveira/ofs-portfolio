@@ -2,16 +2,23 @@ import Footer from "@/components/footer";
 import Menu from "@/components/menu";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Geist, Roboto } from "next/font/google";
+import { Geist, Montserrat, Oxanium } from "next/font/google";
 import "./globals.css";
+import { GridBackground } from "@/components/ui/grid-background";
+
+const oxanium = Oxanium({
+  variable: "--font-oxanium",
+  weight: ["400", "600", "700", "800"],
+  subsets: ["latin"],
+});
 
 const geist = Geist({
   variable: "--font-geist",
   subsets: ["latin"],
 });
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -53,13 +60,16 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="pt-BR" suppressHydrationWarning>
-      <body className={`${geist.variable} ${roboto.variable} antialiased`}>
+      <body
+        className={`${geist.variable} ${montserrat.variable} ${oxanium} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
+          <GridBackground />
           <Menu />
 
           {children}

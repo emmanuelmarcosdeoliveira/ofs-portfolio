@@ -63,7 +63,7 @@ export function ContainerTextFlip({
         "relative max-sm:text-xl inline-block rounded-lg pt-1 pb-1 text-center text-4xl font-bold text-black md:text-xl dark:text-background",
         "[background:linear-gradient(to_bottom,#f3f4f6,#e5e7eb)]",
         "shadow-[inset_0_-1px_#d1d5db,inset_0_0_0_1px_#d1d5db,_0_4px_8px_#d1d5db]",
-        "dark:[background:linear-gradient(to_bottom,#EF7B45,#E16036)]",
+        "dark:[background:linear-gradient(to_bottom,#60d4ea,#9ae5f3)]",
         "dark:shadow-[inset_0_-1px_#10171e,inset_0_0_0_1px_hsla(205,89%,46%,.24),_0_4px_8px_#00000052]",
         className
       )}

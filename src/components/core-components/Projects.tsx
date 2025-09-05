@@ -4,31 +4,41 @@ import { MoveUpRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import ProjectsList from "../ui/projects-list";
+import { DiCss3 } from "react-icons/di";
 
 export default function Projects() {
   return (
     <>
-      <section id="projetos" className="container h-auto mx-auto my-6 p-4">
+      <section
+        id="projetos"
+        className="container relative h-auto mx-auto my-6 p-4"
+      >
         <IntroSection title="Meus Projetos" />
+        <p className="md:hidden ml-6 py-4 text-sm">
+          Abaixo os projetos em destaque
+        </p>
         <div className="flex items-center justify-center">
-          <div className="gap-4 grid grid-cols-2 max-lg:grid-cols-1 mx-6">
-            <div className="flex flex-col gap-4 items-start justify-center max-sm:hidden">
-              <p className="dark:text-foreground/40 font-serif max-w-2xl text-balance text-foreground text-xl">
-                Venha conhecer os meus projetos em{" "}
-                <strong className="font-light text-muted-foreground">
-                  Destaque{" "}
-                </strong>
-                clique em{" "}
-                <span className="text-muted-foreground">saiba mais</span> e veja
-                os detalhes
+          <div className="gap-4 grid w-full max-lg:grid-cols-1 grid-cols-2 mx-6">
+            <div className="flex flex-col gap-4 items-start justify-center">
+              <p className=" -indent-6 dark:text-foreground  max-w-xl text-xl md:text-2xl text-balance text-foreground">
+                Venha conhecer os meus projetos,{" "}
+                <span className="max-sm:hidden"> ao lado</span>{" "}
+                <span className="md:hidden">abaixo</span> estão os projetos que
+                se{" "}
+                <strong className="font-light text-primary">Destacam </strong>
+                clique em <span className="text-primary">saiba mais</span> e
+                veja os detalhes.Ou acesse <strong>Projetos</strong> e vejam
+                todos os meus Projetos
               </p>
-              <Button>
+
+              <Button variant={"outline"}>
                 <Link href={"/projetos"}>Projetos</Link>
                 <MoveUpRight />
               </Button>
             </div>
-
-            <ProjectsList projects={projetos} />
+            <div className="flex w-full flex-1 items-center justify-center">
+              <ProjectsList projects={projetos} />
+            </div>
           </div>
         </div>
       </section>

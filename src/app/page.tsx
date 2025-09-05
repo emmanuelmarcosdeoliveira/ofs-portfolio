@@ -8,7 +8,7 @@ export default function Home() {
     <main className="overflow-x-hidden px-4">
       <HeroSection />
       <Projects />
-      <div className="-rotate-2 py-8">
+      <div className="-rotate-1 py-8">
         <LogoLoopExample />
       </div>
       <Experiences />
