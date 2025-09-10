@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import "@/styles/spotLight.css";
 type SpotlightProps = {
   className?: string;
   fill?: string;

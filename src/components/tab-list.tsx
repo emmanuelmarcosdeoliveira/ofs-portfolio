@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 
 export default function Tablist() {
   return (
-    <Tabs defaultValue="full" className="w-full">
+    <Tabs defaultValue="full" className="w-full relative">
       <TabsList className="bg-background flex gap-8 justify-center mt-8 mx-auto">
         <TabsTrigger className="text-lg" value="full">
           Todos
@@ -40,6 +40,7 @@ export default function Tablist() {
                 height={600}
                 src={proj.imageURL}
                 alt={proj.name}
+                priority
               />
               <h1 className="text-2xl text-primary">{proj.name}</h1>
               <div className="h-12 line-clamp-2 overflow-hidden">
