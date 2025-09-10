@@ -11,6 +11,7 @@ import { Button } from "./ui/button";
 import { linksMenu } from "@/constants/menu";
 import SocialMedia from "./social-media";
 import Contacts from "./contacts";
+import { motion } from "motion/react";
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -26,29 +27,27 @@ export default function Footer() {
       </div>
 
       <div className="container mx-auto py-4">
-        <div className="grid grid-cols-4 items-center justify-items-center max-sm:grid-cols-2">
+        <div className="grid grid-cols-4 items-start justify-items-center max-sm:grid-cols-2">
           <div>
             <Link className="flex font-sans items-center" href="/">
-              <Image
-                suppressHydrationWarning
-                className="dark:text-white"
-                src={theme === "dark" ? "/ofs-light.svg" : "/ofs-dark.svg"}
-                width={36}
-                height={36}
-                alt="logo"
-              />
-              <span className="font-semi-bold text-4xl">FS</span>
+              <span className="font-semi-bold font-serif text-4xl">OFS</span>
             </Link>
-            <p>&copy; oliveirafullstack</p>
+            <p className="font-serif">&copy; OLIVEIRAFULLSTACK</p>
             <p className="text-xs">Construindo soluções inovadoras</p>
           </div>
           <div className="max-sm:hidden">
             <h3 className="font-semibold">Links Rápidos</h3>
             <ul className="*:hover:text-primary *:text-muted-foreground *:text-sm flex flex-col gap-1">
-              {linksMenu.pages.map((link) => (
-                <li key={link.id}>
+              {linksMenu.pages.map((link, i) => (
+                <motion.li
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.2, delay: i * 0.2 }}
+                  key={link.id}
+                >
                   <Link href={link.href}>{link.name}</Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -64,8 +63,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="border-black/20 border-t-1 pt-4 text-center text-xs">
-        &copy; Oliveirafullstack - todos os direitos reservados - {currentYear}
+      <p className="border-black/20 font-serif border-t-1 pt-4 text-center text-xs">
+        &copy; <span>OLIVEIRAFULLSTACK</span> - todos os direitos reservados -{" "}
+        {currentYear}
       </p>
     </section>
   );

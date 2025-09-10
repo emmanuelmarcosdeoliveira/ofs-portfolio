@@ -1,4 +1,3 @@
-import { MoveUpRight } from "lucide-react";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
@@ -6,25 +5,17 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { VscGithubAlt } from "react-icons/vsc";
 import { Button } from "../ui/button";
 import { ContainerTextFlip } from "../ui/container-text-flip";
-import { GridBackground } from "../ui/grid-background";
 import SplitText from "../ui/split-text";
 import { Spotlight } from "../ui/spotlight";
-import { DiCss3 } from "react-icons/di";
-import {
-  SiReact,
-  SiTypescript,
-  SiJavascript,
-  SiHtml5,
-  SiTailwindcss,
-} from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
 import AnimateIcons from "../animate-icons";
+
 export default function HeroSection() {
   return (
     <section id="home" className="container   h-screen mx-auto p-4">
-      <AnimateIcons />
+      <div className="absolute w-screen h-screen container mx-auto">
+        <AnimateIcons />
+      </div>
       <Spotlight />
-
       <div className="flex animate-fade-in-intro flex-col gap-6 lg:gap-4 mt-40 w-full">
         <div className="dark:text-primary flex flex-col font-bold gap-2 items-center justify-center text-center text-destructive text-lg">
           Desenvolvedor
@@ -41,7 +32,7 @@ export default function HeroSection() {
           &copy; Oliveirafullstack
         </span>
         <div className="dark:text-foreground/50">
-          <p className="lg:text-2xl font-medium text-transparent bg-gradient-to-r dark:from-cyan-500 from-gray-900 via-orange-300 dark:via-cyan-100 dark:to-cyan-300 to-gray-600 bg-clip-text animate-gradient animate-fade-in-scale lg:text-balance max-sm:text-xl max-w-6xl mx-auto text-center text-xl">
+          <p className="lg:text-2xl relative z-20 font-medium text-transparent bg-gradient-to-r dark:from-cyan-500 from-gray-900 via-orange-300 dark:via-cyan-100 dark:to-cyan-300 to-gray-600 bg-clip-text animate-gradient animate-fade-in-scale lg:text-balance max-sm:text-xl max-w-6xl mx-auto text-center text-xl">
             Transformando necessidades em aplicações reais, evolventes e
             funcionais, contribuindo com soluções inovadoras e eficazes ajudando
             a solucionar desafios complexos.
@@ -73,17 +64,13 @@ export default function HeroSection() {
         </Link>
       </div>
       <div className="flex gap-4 items-center justify-center pt-8">
-        <Button variant={"outline"} asChild>
+        <Button className="cursor-pointer" variant={"outline"} asChild>
           <Link href="/emmanuel-oliveira.pdf" target="_blank" download>
             Curriculum
-            <MoveUpRight />
           </Link>
         </Button>
-        <Button asChild>
-          <Link href="/projetos">
-            Projetos
-            <MoveUpRight />
-          </Link>
+        <Button className="cursor-pointer" asChild>
+          <Link href="/projetos">Projetos</Link>
         </Button>
       </div>
 

@@ -1,4 +1,4 @@
-import { IntroSection } from "@/components/intro-section";
+import { IntroSection } from "@/components/core-components/intro-section";
 import { TimelineDemo } from "../timeline-jobs";
 
 export default function Experiences() {

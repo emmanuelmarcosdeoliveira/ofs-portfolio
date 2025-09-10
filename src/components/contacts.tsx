@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import Link from "next/link";
 import React from "react";
 import { FaPhone, FaWhatsapp } from "react-icons/fa";
@@ -27,17 +29,23 @@ const socialContacts = [
 
 export default function Contacts() {
   return (
-    <div className="flex gap-3 mt-4">
-      {socialContacts.map((contact) => (
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -50 }}
+      transition={{ delay: 0.5 }}
+      className="flex gap-3"
+    >
+      {socialContacts.map((contact, i) => (
         <Link
           key={contact.id}
-          className="border border-input p-2 rounded-md hover:bg-muted-foreground/10"
+          className="border border-input  p-2 rounded-md hover:bg-muted-foreground/10"
           target="_blank"
           href={contact.href}
         >
           {contact.icon}
         </Link>
       ))}
-    </div>
+    </motion.div>
   );
 }

@@ -171,7 +171,7 @@ export function TimelineDemo() {
     {
       title: "2012",
       content: (
-        <Card className="dark:bg-muted/50 p-4 shadow-2xl">
+        <Card className="dark:bg-muted/50 p-4 shadow-md">
           <CardHeader className="flex">
             <Image
               className="rounded-md shadow-xl"

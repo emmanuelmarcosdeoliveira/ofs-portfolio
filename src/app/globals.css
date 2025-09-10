@@ -36,7 +36,7 @@
   --sidebar-accent-foreground: oklch(0.2138 0.0019 286.2347);
   --sidebar-border: oklch(0.8884 0 0);
   --sidebar-ring: oklch(0.683 0 0);
-  --font-sans: Monda, ui-sans-serif, sans-serif, system-ui;
+  --font-sans: Monda, ui-sans-serif, sans-serif;
   --font-serif: Oxanium, ui-serif, Georgia, Cambria, "Times New Roman", Times,
     serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -91,7 +91,7 @@
   --sidebar-accent-foreground: oklch(0.9461 0 0);
   --sidebar-border: oklch(0.2686 0 0);
   --sidebar-ring: oklch(0.4239 0 0);
-  --font-sans: Monda, ui-sans-serif, sans-serif, system-ui;
+  --font-sans: Monda, ui-sans-serif, sans-serif;
   --font-serif: Oxanium, ui-serif, Georgia, Cambria, "Times New Roman", Times,
     serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,

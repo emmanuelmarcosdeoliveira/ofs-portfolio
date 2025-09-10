@@ -110,7 +110,7 @@ const ThemeSwitch = React.forwardRef<HTMLDivElement, ThemeSwitchProps>(
 
             <div
               className={cn(
-                "absolute top-1 h-6 w-6 rounded-full bg-foreground transition-all duration-200 ease-in-out",
+                "absolute top-1 h-6 w-6 rounded-full bg-foreground transition-all duration-200  ease-in-out",
                 currentModeIndex === 0
                   ? "left-1"
                   : currentModeIndex === 1

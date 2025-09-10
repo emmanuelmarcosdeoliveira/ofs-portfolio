@@ -1,10 +1,11 @@
-import { IntroSection } from "@/components/intro-section";
+"use client";
+import { IntroSection } from "@/components/core-components/intro-section";
 import { projetos } from "@/constants/projects";
-import { MoveUpRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import ProjectsList from "../ui/projects-list";
-import { DiCss3 } from "react-icons/di";
 
 export default function Projects() {
   return (
@@ -20,7 +21,13 @@ export default function Projects() {
         <div className="flex items-center justify-center">
           <div className="gap-4 grid w-full max-lg:grid-cols-1 grid-cols-2 mx-6">
             <div className="flex flex-col gap-4 items-start justify-center">
-              <p className=" -indent-6 dark:text-foreground  max-w-xl text-xl md:text-2xl text-balance text-foreground">
+              <motion.p
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 150 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                className=" -indent-6 dark:text-foreground  max-w-xl text-xl md:text-2xl text-balance text-foreground"
+              >
                 Venha conhecer os meus projetos,{" "}
                 <span className="max-sm:hidden"> ao lado</span>{" "}
                 <span className="md:hidden">abaixo</span> estão os projetos que
@@ -29,12 +36,22 @@ export default function Projects() {
                 clique em <span className="text-primary">saiba mais</span> e
                 veja os detalhes.Ou acesse <strong>Projetos</strong> e vejam
                 todos os meus Projetos
-              </p>
+              </motion.p>
 
-              <Button variant={"outline"}>
-                <Link href={"/projetos"}>Projetos</Link>
-                <MoveUpRight />
-              </Button>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ delay: 0.5, duration: 0.2 }}
+              >
+                <Button
+                  className="hover:text-primary cursor-pointer"
+                  variant={"outline"}
+                >
+                  <Link href={"/projetos"}>Projetos</Link>
+                  <MoveRight />
+                </Button>
+              </motion.div>
             </div>
             <div className="flex w-full flex-1 items-center justify-center">
               <ProjectsList projects={projetos} />

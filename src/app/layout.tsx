@@ -1,10 +1,10 @@
+import Menu from "@/components/core-components/menu";
 import Footer from "@/components/footer";
-import Menu from "@/components/menu";
+import { ThemeProvider } from "@/components/provider/theme-provider";
+import { GridBackground } from "@/components/ui/grid-background";
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { Geist, Montserrat, Oxanium } from "next/font/google";
 import "./globals.css";
-import { GridBackground } from "@/components/ui/grid-background";
 
 const oxanium = Oxanium({
   variable: "--font-oxanium",
@@ -59,13 +59,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" lang="pt-BR" suppressHydrationWarning>
+    <html data-scroll-behavior="smooth" lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${montserrat.variable} ${oxanium} antialiased`}
+        className={`${geist.variable} ${montserrat.variable} overflow-x-hidden ${oxanium} antialiased`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

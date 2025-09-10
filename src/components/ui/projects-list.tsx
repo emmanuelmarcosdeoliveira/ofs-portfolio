@@ -20,7 +20,7 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
   return (
     <>
       <Carousel
-        className="max-sm:mt-12 max-sm:mx-auto max-sm:w-[300px] md:w-[620px] rounded-md w-[630px]"
+        className="max-sm:mt-12 max-sm:mx-auto max-sm:w-[310px] md:w-[620px] rounded-md w-[630px]"
         plugins={[
           Autoplay({
             delay: 4000,

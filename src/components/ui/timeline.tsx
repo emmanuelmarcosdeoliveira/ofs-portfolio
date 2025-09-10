@@ -1,6 +1,7 @@
 "use client";
-import { motion, useScroll, useTransform } from "motion/react";
+import { useScroll, useTransform } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import WorkExperiences from "../experiences";
 
 interface TimelineEntry {
   title: string;
@@ -29,7 +30,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="bg-muted dark:bg-muted/20  md:px-10 mt-10 overflow-hidden rounded-2xl shadow-sm w-full"
+      className="bg-muted dark:bg-muted/20 p-6  md:px-10 py-10 overflow-hidden rounded-2xl shadow-sm w-full"
       ref={containerRef}
     >
       <div className="lg:px-10 max-sm:py-6 max-w-7xl md:px-8 mx-auto px-4 py-10">
@@ -42,7 +43,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </p>
       </div>
 
-      <div ref={ref} className="max-sm:pb-6 max-w-8xl mx-auto pb-20 relative">
+      {/* <div ref={ref} className="max-sm:pb-6 max-w-8xl mx-auto pb-20 relative">
         {data.map((item, index) => (
           <div
             key={index}
@@ -79,7 +80,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="absolute bg-gradient-to-t dark:from-cyan-100 dark:via-cyan-300 from-[0%] from-amber-700 inset-x-0 max-sm:hidden rounded-full to-transparent top-0 via-[10%] via-amber-300 w-[2px]"
           />
         </div>
-      </div>
+      </div> */}
+
+      <WorkExperiences />
     </div>
   );
 };
