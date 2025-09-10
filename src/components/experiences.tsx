@@ -8,7 +8,7 @@ export default function WorkExperiences() {
   const lastJob = works[0];
   const penultimateJob = works[1];
   const firstJob = works[2];
-  console.log(lastJob);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
