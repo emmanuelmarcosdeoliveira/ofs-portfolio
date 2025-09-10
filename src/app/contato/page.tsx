@@ -1,11 +1,6 @@
-import SocialMedia from "@/components/social-media";
+import ContactForm from "@/app/contato/contact-form";
 import TextComponent from "@/components/text";
-import { Mail, MapPin, Phone } from "lucide-react";
-import Link from "next/link";
-import React from "react";
 import ListContact from "./list-contact";
-import { GridBackground } from "@/components/ui/grid-background";
-import ContactForm from "@/components/contact-form";
 
 export default function PageContact() {
   return (
