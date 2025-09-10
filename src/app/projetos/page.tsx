@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Projetos() {
   return (
-    <section className="container  mx-auto p-4 py-16">
+    <section className="container relative  mx-auto p-4 py-16">
       <Spotlight />
       <div className="flex flex-col items-center justify-center">
         <h1 className="pt-16 text-4xl text-center text-primary">
