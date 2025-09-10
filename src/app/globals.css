@@ -36,7 +36,7 @@
   --sidebar-accent-foreground: oklch(0.2138 0.0019 286.2347);
   --sidebar-border: oklch(0.8884 0 0);
   --sidebar-ring: oklch(0.683 0 0);
-  --font-sans: Monda, ui-sans-serif, sans-serif;
+  --font-sans: Montserrat ui-sans-serif, sans-serif, system-ui;
   --font-serif: Oxanium, ui-serif, Georgia, Cambria, "Times New Roman", Times,
     serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -91,7 +91,7 @@
   --sidebar-accent-foreground: oklch(0.9461 0 0);
   --sidebar-border: oklch(0.2686 0 0);
   --sidebar-ring: oklch(0.4239 0 0);
-  --font-sans: Monda, ui-sans-serif, sans-serif;
+  --font-sans: Montserrat, ui-sans-serif, sans-serif, system-ui;
   --font-serif: Oxanium, ui-serif, Georgia, Cambria, "Times New Roman", Times,
     serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -255,9 +255,7 @@
   }
 }
 
-body {
-  font-family: Montserrat;
-}
+/* Animações de Carrousel do logo de tecnologias   */
 
 .logoloop {
   position: relative;
@@ -333,8 +331,6 @@ body {
   -webkit-user-drag: none;
 
   pointer-events: none;
-
-  /* Links handle interaction */
 
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -428,10 +424,11 @@ body {
   }
 }
 
+/* Animação do Componente de Spot qye está na HeroSection da Home */
+
 @theme inline {
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 }
-
 @keyframes spotlight {
   0% {
     opacity: 0;
