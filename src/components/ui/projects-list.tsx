@@ -18,9 +18,9 @@ interface ProjectsListProps {
 
 export default function ProjectsList({ projects }: ProjectsListProps) {
   return (
-    <>
+    <section className="container flex items-center justify-center mx-auto">
       <Carousel
-        className="max-sm:mt-12 max-sm:mx-auto max-sm:w-[310px] md:w-[620px] rounded-md w-[630px]"
+        className="max-sm:mt-12 flex  max-sm:mx-auto max-sm:w-[380px]  rounded-md w-[600px]"
         plugins={[
           Autoplay({
             delay: 4000,
@@ -55,6 +55,6 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
             ))}
         </CarouselContent>
       </Carousel>
-    </>
+    </section>
   );
 }

@@ -1,25 +1,36 @@
-import React from "react";
-import CardFlip from "../ui/card-flip-sites";
-import CardFlipSites from "../ui/card-flip-sites";
-import CardFlipLandingPage from "../ui/card-flip-landigPage";
-import { GridBackground } from "../ui/grid-background";
+import { fadeLeft, fadeRight } from "@/styles/animationMotion";
+import * as motion from "motion/react-client";
+import TextComponent from "../text";
 import CardFlipBackEnd from "../ui/card-flip-back-end";
+import CardFlipLandingPage from "../ui/card-flip-landingPage";
+import { default as CardFlipSeo } from "../ui/card-flip-seo";
+import CardFlipSites from "../ui/card-flip-sites";
 
 export default function CardServices() {
   return (
-    <section className="container overflow-hidden  md:-rotate-2  mx-auto">
-      <div className="h-auto shadow-md rounded-xl  p-8   bg-muted">
-        <div className="md:rotate-2">
-          <h1 className="text-primary font-serif pt-6 text-2xl">
-            Serviços Especializados
-          </h1>
-          <span className=" text-lg w-full block pt-3 leading-snug">
+    <section className="container py-16 max-sm:py-8 overflow-hidden  md:-rotate-2  mx-auto ">
+      <div className="h-auto shadow-md rounded-xl px-4 py-8 bg-muted">
+        <div className="md:rotate-2 ">
+          <motion.div {...fadeRight} transition={{ delay: 0.3 }}>
+            <TextComponent
+              className="pt-6 max-sm:text-2xl leading-10 "
+              variant={"title-xl"}
+            >
+              Serviços Especializados
+            </TextComponent>
+          </motion.div>
+          <motion.span
+            {...fadeLeft}
+            transition={{ delay: 0.5 }}
+            className=" text-xl max-sm:text-lg  max-w-lg pt-4 w-full block  leading-snug"
+          >
             Transformando suas ideias em experiências digitais excepcionais com
             soluções personalizadas para suas necessidades.
-          </span>
-          <div className="pt-8 justify-around w-full grid grid-cols-1 md:flex gap-8">
+          </motion.span>
+          <div className="pt-8 max-md:justify-items-center justify-around w-full flex  flex-wrap   gap-8">
             <CardFlipSites />
             <CardFlipLandingPage />
+            <CardFlipSeo />
             <CardFlipBackEnd />
           </div>
         </div>

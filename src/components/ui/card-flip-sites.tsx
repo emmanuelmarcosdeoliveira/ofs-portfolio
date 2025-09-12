@@ -1,7 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { fadeUp } from "@/styles/animationMotion";
 import { ArrowRight, Globe } from "lucide-react";
+import * as motion from "motion/react-client";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -14,11 +16,11 @@ export interface CardFlipProps {
 
 export default function CardFlipSites({
   title = "Sites Profissionais",
-  subtitle = "Sites modernos e elegantes",
+  subtitle = "Design atraentes",
   description = "Sites convertem visitas em clientes",
   features = [
-    "UI/UX",
-    "Design Modernos",
+    "Design único",
+    "Navegação intuitiva",
     "Sites Responsivos",
     "Alta performance",
   ],
@@ -26,7 +28,9 @@ export default function CardFlipSites({
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div
+    <motion.div
+      {...fadeUp}
+      transition={{ delay: 0.2 }}
       className="relative w-full max-w-[280px] h-[320px] group [perspective:2000px]"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
@@ -226,6 +230,6 @@ export default function CardFlipSites({
           box-shadow: 0px 0px 50px #60d4ea !important;
         }
       `}</style>
-    </div>
+    </motion.div>
   );
 }

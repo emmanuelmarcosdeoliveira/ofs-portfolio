@@ -44,10 +44,10 @@ export default function CardWork({
       <CardHeader className="flex">
         {companyImage && (
           <Image
-            className="rounded-md shadow-xl"
+            className="rounded-md  shadow-xl"
             src={companyImage as string | StaticImageData}
             width={35}
-            height={32}
+            height={35}
             alt="logo Arcos Dourados"
           />
         )}

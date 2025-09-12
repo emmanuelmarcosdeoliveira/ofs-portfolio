@@ -1,9 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import Link from "next/link";
-import React from "react";
 import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 const socialMedia = [
   {

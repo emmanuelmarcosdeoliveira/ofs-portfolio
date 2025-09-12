@@ -1,9 +1,9 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CardWork from "./card-work";
 import { works } from "@/constants/works";
 import { motion } from "motion/react";
+import CardWork from "./card-work";
 export default function WorkExperiences() {
   const lastJob = works[0];
   const penultimateJob = works[1];
@@ -15,11 +15,12 @@ export default function WorkExperiences() {
       whileInView={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 50 }}
       transition={{ delay: 0.3 }}
+      className="container overflow-hidden py-16 mx-auto"
     >
       <Tabs
         defaultValue="tab-1"
         orientation="vertical"
-        className="w-full flex-row max-md:flex-col"
+        className="w-full  flex flex-row max-md:flex-col"
       >
         <TabsList className="flex-col max-md:w-full">
           <TabsTrigger value="tab-1" className="w-full">

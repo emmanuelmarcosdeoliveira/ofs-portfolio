@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "motion/react";
 import Link from "next/link";
-import React from "react";
 import { FaPhone, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 
@@ -36,7 +35,7 @@ export default function Contacts() {
       transition={{ delay: 0.5 }}
       className="flex gap-3"
     >
-      {socialContacts.map((contact, i) => (
+      {socialContacts.map((contact) => (
         <Link
           key={contact.id}
           className="border border-input  p-2 rounded-md hover:bg-muted-foreground/10"

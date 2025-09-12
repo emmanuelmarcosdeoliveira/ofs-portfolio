@@ -1,12 +1,11 @@
-"use client";
 import { fadeLeft, fadeRight } from "@/styles/animationMotion";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 import WorkExperiences from "../experiences";
 import TextComponent from "../text";
 
 export default function Experiences() {
   return (
-    <section className="container py-16 mx-auto">
+    <section className="container px-4 py-16 mx-auto">
       <div>
         <motion.div {...fadeLeft} transition={{ delay: 0.2 }}>
           <TextComponent variant={"title-xl"}>

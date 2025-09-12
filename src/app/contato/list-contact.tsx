@@ -1,11 +1,10 @@
 "use client";
 import SocialMedia from "@/components/social-media";
 import TextComponent from "@/components/text";
-import { fadeUp } from "@/styles/fadeUp";
+import { fadeUp } from "@/styles/animationMotion";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
-import React from "react";
 
 export default function ListContact() {
   const myContact = [
