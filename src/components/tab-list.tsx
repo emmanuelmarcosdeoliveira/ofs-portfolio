@@ -1,14 +1,14 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { projetos } from "@/constants/projects";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { motion } from "motion/react";
 
 export default function Tablist() {
   return (
-    <Tabs defaultValue="full" className="w-full relative">
+    <Tabs defaultValue="full" className="w-full overflow-hidden">
       <TabsList className="bg-background flex gap-8 justify-center mt-8 mx-auto">
         <TabsTrigger className="text-lg" value="full">
           Todos

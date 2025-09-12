@@ -1,6 +1,6 @@
 "use client";
 
-import { linksMenu } from "@/constants/menu";
+import { linksMenu } from "@/constants/linksMenu";
 import { motion } from "motion/react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -10,6 +10,7 @@ import { ThemeSwitchMenu } from "../provider/switch-theme";
 export default function Menu() {
   const { theme } = useTheme();
   const pathname = usePathname();
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -200 }}
@@ -17,7 +18,7 @@ export default function Menu() {
       transition={{ delay: 0.5, duration: 0.3 }}
       className="-translate-x-1/2 fixed left-1/2 mt-6 z-40"
     >
-      <div className="backdrop-blur-sm border-1 dark:border-white/30 flex h-12 items-center justify-between max-md:px-1 max-md:w-sm px-2 rounded-xl w-3xl">
+      <div className="backdrop-blur-sm border-1 dark:border-white/30 flex h-12 items-center justify-between max-sm:w-sm  max-md:px-1 max-md:w-lg px-4  w-3xl  rounded-xl">
         <div>
           <Link className="flex justify-center font-sans items-center" href="/">
             {/* <Image

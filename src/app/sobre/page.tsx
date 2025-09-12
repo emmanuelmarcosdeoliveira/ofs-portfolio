@@ -6,13 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { courses } from "@/constants/courses";
 import { skills } from "@/constants/skills";
 
-import {
-  ArrowRight,
-  Award,
-  Database,
-  SplinePointer,
-  WandSparkles,
-} from "lucide-react";
+import { ArrowRight, Award } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,7 +45,8 @@ export default function Sobre() {
         >
           <div className="group overflow-hidden rounded-xl">
             <Image
-              className=" transition-transform duration-500 ease-in-out  group-hover:scale-110  shadow-md grayscale-20 hover:grayscale-0"
+              priority
+              className=" w-full transition-transform duration-500 ease-in-out  group-hover:scale-110  shadow-md grayscale-20 hover:grayscale-0"
               src="https://res.cloudinary.com/delo0gvyb/image/upload/v1757015930/Emmanuel_kpg7so.jpg"
               alt="foto de Perfil Emmanuel Oliveira"
               width={380}

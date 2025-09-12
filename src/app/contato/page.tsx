@@ -4,7 +4,7 @@ import ListContact from "./list-contact";
 
 export default function PageContact() {
   return (
-    <section className="container p-4 py-16 mx-auto">
+    <section className="container relative overflow-hidden p-4 py-16 mx-auto">
       <TextComponent
         className="text-center pt-16 max-sm:text-2xl"
         variant="title-xl"

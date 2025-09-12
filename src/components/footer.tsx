@@ -1,23 +1,19 @@
 "use client";
 
+import { linksMenu } from "@/constants/linksMenu";
 import { ArrowUp } from "lucide-react";
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import Link from "next/link";
-import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-
-import { MdOutlineAlternateEmail } from "react-icons/md";
-import { Button } from "./ui/button";
-import { linksMenu } from "@/constants/menu";
-import SocialMedia from "./social-media";
-import Contacts from "./contacts";
 import { motion } from "motion/react";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import Contacts from "./contacts";
+import SocialMedia from "./social-media";
+import { Button } from "./ui/button";
 
 export default function Footer() {
   const { theme } = useTheme();
   const currentYear: number = new Date().getFullYear();
   return (
-    <section className="bg-muted py-4 relative">
+    <section className="bg-muted  relative p-4">
       <div className="-top-3 -translate-x-1/2 absolute flex justify-center left-1/2">
         <Button className="shadow-xl" size="icon">
           <Link href="#home">

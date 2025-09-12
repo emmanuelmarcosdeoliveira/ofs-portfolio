@@ -1,8 +1,6 @@
-"use client";
-import { IntroSection } from "@/components/core-components/intro-section";
 import { projetos } from "@/constants/projects";
 import { MoveRight } from "lucide-react";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import ProjectsList from "../ui/projects-list";
@@ -12,21 +10,20 @@ export default function Projects() {
     <>
       <section
         id="projetos"
-        className="container relative h-auto mx-auto my-6 p-4"
+        className="container  max-sm:w-[380px] h-auto mx-auto my-6"
       >
-        <IntroSection title="Meus Projetos" />
         <p className="md:hidden ml-6 py-4 text-sm">
           Abaixo os projetos em destaque
         </p>
         <div className="flex items-center justify-center">
           <div className="gap-4 grid w-full max-lg:grid-cols-1 grid-cols-2 mx-6">
-            <div className="flex flex-col gap-4 items-start justify-center">
+            <div className="flex flex-col gap-2 items-start justify-center">
               <motion.p
                 initial={{ opacity: 0, x: -150 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 150 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className=" -indent-6 dark:text-foreground  max-w-xl text-xl md:text-2xl text-balance text-foreground"
+                className="indent-6 dark:text-foreground  max-w-xl text-xl md:text-2xl text-balance text-foreground"
               >
                 Venha conhecer os meus projetos,{" "}
                 <span className="max-sm:hidden"> ao lado</span>{" "}
@@ -45,7 +42,7 @@ export default function Projects() {
                 transition={{ delay: 0.5, duration: 0.2 }}
               >
                 <Button
-                  className="hover:text-primary cursor-pointer"
+                  className="hover:text-primary hover:border-primary cursor-pointer"
                   variant={"outline"}
                 >
                   <Link href={"/projetos"}>Projetos</Link>

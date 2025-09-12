@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 export function GridBackground() {
   return (
-    <div className="-z-10 fixed dark:bg-background dark:opacity-10 flex h-full inset-0 items-center justify-center opacity-70 overflow-hidden w-full">
+    <div className="-z-10 fixed dark:bg-background dark:opacity-10 flex h-full inset-0 items-center justify-center opacity-70 overflow-x-hidden w-full">
       <div
         className={cn(
           "absolute inset-0",
