@@ -3,7 +3,7 @@ import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import { GridBackground } from "@/components/ui/grid-background";
 import type { Metadata } from "next";
-import { Geist, Montserrat, Oxanium } from "next/font/google";
+import { JetBrains_Mono, Montserrat, Oxanium } from "next/font/google";
 import "./globals.css";
 
 const oxanium = Oxanium({
@@ -12,8 +12,9 @@ const oxanium = Oxanium({
   subsets: ["latin"],
 });
 
-const geist = Geist({
-  variable: "--font-geist",
+const jetBrainsMono = JetBrains_Mono({
+  weight: ["400", "700"],
+  variable: "--font-jetBrainsMono",
   subsets: ["latin"],
 });
 
@@ -61,7 +62,7 @@ export default function RootLayout({
   return (
     <html data-scroll-behavior="smooth" lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${montserrat.variable} overflow-x-hidden ${oxanium} antialiased`}
+        className={`${jetBrainsMono.variable} ${montserrat.variable} overflow-x-hidden ${oxanium} antialiased`}
       >
         <ThemeProvider
           attribute="class"
