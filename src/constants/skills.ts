@@ -112,12 +112,11 @@ export const skills = {
     },
 
     {
-      id: 23,
+      id: 24,
       name: "Figma",
       icon: "/figma.svg",
-      url: "https://www.figma.com/",
+      url: "https://www.figma.com",
     },
-    { id: 24, name: "n8n", icon: "/n8n.svg", url: "https://n8n.io/" },
   ],
   backEnd: [
     {
@@ -187,6 +186,12 @@ export const skills = {
       name: "Render",
       icon: "/render.svg",
       url: "https://render.com/",
+    },
+    {
+      id: 12,
+      name: "JWT",
+      icon: "/jwt.svg",
+      url: "https://www.jwt.io/",
     },
   ],
 };
