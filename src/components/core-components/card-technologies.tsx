@@ -12,7 +12,7 @@ export default function CardTechnologies() {
       <div className="h-auto  rounded-xl  p-4  w-full  bg-muted/50">
         <motion.div {...fadeLeft} transition={{ delay: 0.2 }}>
           <TextComponent
-            className="pt-6 max-sm:text-2xl leading-10 "
+            className="pt-6 md:-rotate-2 max-sm:text-2xl leading-10 "
             variant="title-xl"
           >
             Tecnologias & Ferramentas
