@@ -4,7 +4,7 @@ import { fadeLeft, fadeRight } from "@/styles/animationMotion";
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
-import TextComponent from "../text";
+import TextComponent from "./text";
 
 export default function CardTechnologies() {
   return (

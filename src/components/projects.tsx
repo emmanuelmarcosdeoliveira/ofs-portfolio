@@ -2,8 +2,8 @@ import { projetos } from "@/constants/projects";
 import { MoveRight } from "lucide-react";
 import * as motion from "motion/react-client";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import ProjectsList from "../ui/projects-list";
+import { Button } from "./ui/button";
+import ProjectsList from "./ui/projects-list";
 
 export default function Projects() {
   return (

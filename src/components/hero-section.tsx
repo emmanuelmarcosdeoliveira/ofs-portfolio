@@ -3,11 +3,11 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { VscGithubAlt } from "react-icons/vsc";
-import AnimateIcons from "../animate-icons";
-import { Button } from "../ui/button";
-import { ContainerTextFlip } from "../ui/container-text-flip";
-import SplitText from "../ui/split-text";
-import { Spotlight } from "../ui/spotlight";
+import AnimateIcons from "./animate-icons";
+import { Button } from "./ui/button";
+import { ContainerTextFlip } from "./ui/container-text-flip";
+import SplitText from "./ui/split-text";
+import { Spotlight } from "./ui/spotlight";
 
 export default function HeroSection() {
   return (

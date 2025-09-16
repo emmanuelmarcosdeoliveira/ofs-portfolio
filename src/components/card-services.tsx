@@ -1,10 +1,10 @@
 import { fadeLeft, fadeRight } from "@/styles/animationMotion";
 import * as motion from "motion/react-client";
-import TextComponent from "../text";
-import CardFlipBackEnd from "../ui/card-flip-back-end";
-import CardFlipLandingPage from "../ui/card-flip-landingPage";
-import { default as CardFlipSeo } from "../ui/card-flip-seo";
-import CardFlipSites from "../ui/card-flip-sites";
+import TextComponent from "./text";
+import CardFlipBackEnd from "./ui/card-flip-back-end";
+import CardFlipLandingPage from "./ui/card-flip-landingPage";
+import { default as CardFlipSeo } from "./ui/card-flip-seo";
+import CardFlipSites from "./ui/card-flip-sites";
 
 export default function CardServices() {
   return (

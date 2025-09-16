@@ -1,9 +1,9 @@
-import CardServices from "@/components/core-components/card-services";
-import CardTechnologies from "@/components/core-components/card-technologies";
-import HeroSection from "@/components/core-components/hero-section";
-import Projects from "@/components/core-components/Projects";
-import Experiences from "@/components/experiences";
+import CardServices from "@/components/card-services";
+import CardTechnologies from "@/components/card-technologies";
+import HeroSection from "@/components/hero-section";
 import LogoLoopComponents from "@/components/logos";
+import Projects from "@/components/projects";
+import Experiences from "@/components/work-experiences";
 
 export default function Home() {
   return (

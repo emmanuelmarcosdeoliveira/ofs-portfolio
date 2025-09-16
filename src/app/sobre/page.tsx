@@ -1,8 +1,8 @@
 import CallAction from "@/components/call-action";
+import CardTechnologies from "@/components/card-technologies";
 import Certificates from "@/components/certificates";
-import CardTechnologies from "@/components/core-components/card-technologies";
-import WorkExperiences from "@/components/experiences";
 import MyDescription from "@/components/my-description";
+import WorkExperiences from "@/components/work-experiences";
 import { fade } from "@/styles/animationMotion";
 import * as motion from "motion/react-client";
 

@@ -1,5 +1,5 @@
-import Menu from "@/components/core-components/menu";
 import Footer from "@/components/footer";
+import Menu from "@/components/menu";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import { GridBackground } from "@/components/ui/grid-background";
 import type { Metadata } from "next";
