@@ -16,11 +16,13 @@ interface CardProductsProps {
   slug?: string;
   name: string;
   description: string;
+  destaque?: boolean;
   imageURL: string | StaticImageData;
   images?: string | StaticImageData;
+  challenges?: string[];
   online?: string;
   gitHub?: string;
-  destaque?: boolean;
+  features?: string[];
   type?: string;
   technologies: string[];
 }

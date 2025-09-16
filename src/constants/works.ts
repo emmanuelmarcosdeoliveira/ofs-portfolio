@@ -9,7 +9,7 @@ export const works = [
     location: "São Paulo, SP",
     companyImage: "/logo-arcos.png",
     descriptionRole:
-      "Como gestor direto do restaurante liderei equipes de 12 gerentes e 60 funcionários Responsável por gerir diversos Indicadores como Turnover, Vendas, Margem Bruta, Treinamento garantindo excelência operacional e resultados financeiros.",
+      "Atuei como gestor direto de restaurantes onde liderei equipes de até 12 gerentes e 60 funcionários, onde fui o responsável por gerir diversos Indicadores como:  Turnover, Vendas, Margem Bruta, Treinamento, garantindo excelência operacional e resultados financeiros.",
     achievementsTitle: "Principais Conquistas:",
     achievementsList: [
       "+18% no aumento de vendas através de estratégias de ticket médio e ações promocionais.",
