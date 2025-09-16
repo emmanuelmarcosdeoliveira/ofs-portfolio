@@ -60,8 +60,8 @@ export default function Footer() {
         </div>
       </div>
       <p className="border-black/20 font-serif border-t-1 pt-4 text-center text-xs">
-        &copy; <span>OLIVEIRAFULLSTACK</span> - todos os direitos reservados -{" "}
-        {currentYear}
+        &copy; <span>OLIVEIRAFULLSTACK</span> - todos os direitos reservados{" "}
+        2022 - {currentYear}
       </p>
     </section>
   );
