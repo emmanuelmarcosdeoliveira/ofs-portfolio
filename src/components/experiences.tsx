@@ -1,7 +1,7 @@
 import { fadeLeft, fadeRight } from "@/styles/animationMotion";
 import * as motion from "motion/react-client";
-import TextComponent from "../text";
-import WorkExperiences from "../work-experiences";
+import TextComponent from "./text";
+import WorkExperiences from "./work-experiences";
 
 export default function Experiences() {
   return (
