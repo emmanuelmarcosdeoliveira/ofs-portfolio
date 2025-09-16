@@ -32,10 +32,11 @@ export default function HeroSection() {
           &copy; Oliveirafullstack
         </span>
         <div className="dark:text-foreground/50">
-          <p className="lg:text-2xl relative px-4 z-20 font-medium text-transparent bg-gradient-to-r dark:from-cyan-500 from-gray-900 via-orange-300 dark:via-cyan-100 dark:to-cyan-300 to-gray-600 bg-clip-text animate-gradient animate-fade-in-scale lg:text-balance max-sm:text-xl max-w-6xl mx-auto text-center text-xl">
-            Transformando necessidades em aplicações reais, evolventes e
-            funcionais, contribuindo com soluções inovadoras e eficazes ajudando
-            a solucionar desafios complexos.
+          <p className="lg:text-2xl relative px-4 z-20 font-medium text-transparent bg-gradient-to-r dark:from-cyan-100 from-gray-900 via-orange-300 dark:via-gray-400 dark:to-cyan-300 to-gray-600 bg-clip-text animate-gradient animate-fade-in-scale lg:text-balance max-sm:text-xl max-w-6xl mx-auto text-center text-xl">
+            Desenvolvedor Front-end com experiência prática em React, Next.js e
+            TypeScript, desenvolvo aplicações web modernas, completas e
+            escaláveis, integrando Front-end e Back-end com boas práticas de
+            código e foco em performance.
           </p>
         </div>
       </div>

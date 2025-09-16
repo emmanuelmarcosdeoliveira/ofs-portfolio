@@ -1,15 +1,15 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
-import { motion } from "motion/react";
 import { SplashScreen } from "@/components/loading/splash-screen";
+import { motion } from "motion/react";
+import { ReactNode, useEffect, useState } from "react";
 
 export default function ClientWrapper({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simula carregamento inicial
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 

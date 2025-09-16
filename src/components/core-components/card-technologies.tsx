@@ -33,7 +33,7 @@ export default function CardTechnologies() {
             {skills.frontEnd.map((tec, i) => (
               <motion.div
                 {...fadeRight}
-                transition={{ delay: 0.2 + i * 0.1 }}
+                transition={{ delay: 0.1 + i * 0.1 }}
                 key={tec.id}
                 className="grid cursor-pointer  grayscale-100 hover:grayscale-0   z-10 relative first:col-span-2 first:row-span-3    group transition-transform  overflow-hidden   bg-neutral-300 dark:bg-neutral-800  ease-in-out dark:hover:bg-linear-to-b  shadow-xs  to-black  justify-center items-center"
               >
@@ -62,7 +62,7 @@ export default function CardTechnologies() {
             {skills.backEnd.map((tec, i) => (
               <motion.div
                 {...fadeLeft}
-                transition={{ delay: 0.2 + i * 0.1 }}
+                transition={{ delay: 0.1 + i * 0.1 }}
                 key={tec.id}
                 className="grid cursor-pointer  grayscale-100 hover:grayscale-0   z-10 relative first:col-span-2 first:row-span-3    group transition-transform  overflow-hidden   bg-neutral-300 dark:bg-zinc-800  ease-in-out dark:hover:bg-linear-to-b  shadow-xs  to-black  justify-center items-center"
               >

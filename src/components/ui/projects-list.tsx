@@ -23,7 +23,7 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
         className="max-sm:mt-12 flex  max-sm:mx-auto max-sm:w-[380px]  rounded-md w-[600px]"
         plugins={[
           Autoplay({
-            delay: 4000,
+            delay: 5000,
           }),
         ]}
         opts={{

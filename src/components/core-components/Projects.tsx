@@ -23,7 +23,7 @@ export default function Projects() {
                 whileInView={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 150 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="indent-6 dark:text-foreground  max-w-xl text-xl md:text-2xl text-balance text-foreground"
+                className="indent-6 dark:text-foreground  max-w-xl  md:text-lg text-balance text-foreground"
               >
                 Venha conhecer os meus projetos,{" "}
                 <span className="max-sm:hidden"> ao lado</span>{" "}
