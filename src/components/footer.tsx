@@ -25,16 +25,6 @@ export default function Footer() {
           <div>
             <Link className="flex font-sans items-center" href="/">
               <span className="font-semi-bold font-serif text-4xl">OFS</span>
-
-              <Image
-                suppressHydrationWarning
-                className="dark:text-white"
-                src={theme === "dark" ? "/ofs-light.svg" : "/ofs-dark.svg"}
-                width={36}
-                height={36}
-                alt="logo"
-              />
-              <span className="font-semi-bold text-4xl">FS</span>
             </Link>
             <p className="font-serif">&copy; OLIVEIRAFULLSTACK</p>
             <p className="text-xs">Construindo soluções inovadoras</p>
