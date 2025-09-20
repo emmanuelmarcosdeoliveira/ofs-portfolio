@@ -48,7 +48,7 @@ export default async function Project({ params }: ProjectPageProps) {
         />
       </motion.div>
 
-      <section className="container flex flex-col mx-auto py-16 w-screen">
+      <section className="container px-4 flex flex-col mx-auto py-16 w-screen">
         <motion.div
           {...fadeLeft}
           transition={{ delay: 0.2 }}
@@ -65,7 +65,7 @@ export default async function Project({ params }: ProjectPageProps) {
             </Link>
           </Button>
         </motion.div>
-        <div className="container mx-auto p-4">
+        <div className="">
           <div className="flex flex-col gap-2 items-start justify-center">
             <motion.h1
               {...fadeRight}
@@ -79,17 +79,30 @@ export default async function Project({ params }: ProjectPageProps) {
             <motion.p
               {...fadeDown}
               transition={{ delay: 0.3 }}
-              className="leading-relaxed max-sm:w-xs max-w-4xl text-balance text-xl"
+              className="leading-relaxed max-sm:w-md max-w-4xl text-balance text-xl"
             >
               {projeto.description}
             </motion.p>
 
-            {funcionalidades && (
+            <p className="mt-6">Tecnologias usadas nesse projeto:</p>
+            <div className="flex flex-wrap gap-2 h-auto mt-4">
+              {projeto.technologies.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  {...fadeRight}
+                  transition={{ delay: 0.1 * index }}
+                >
+                  <Badge>{tech}</Badge>
+                </motion.div>
+              ))}
+            </div>
+
+            {funcionalidades > 0 && (
               <motion.div {...fadeLeft}>
-                <TextComponent className="pt-6" variant={"title-md"}>
-                  Principais funcionalidades{" "}
+                <TextComponent className="pt-6 " variant={"title-md"}>
+                  Principais características{" "}
                 </TextComponent>
-                <ul className="text-lg">
+                <ul className="text-lg leading-relaxed max-sm:w-md max-w-4xl text-balance">
                   {projeto.features.map((item, index) => (
                     <motion.li
                       {...fadeLeft}
@@ -103,12 +116,13 @@ export default async function Project({ params }: ProjectPageProps) {
                 </ul>
               </motion.div>
             )}
-            {desafios && (
+
+            {desafios > 0 && (
               <>
                 <TextComponent className="pt-6" variant={"title-md"}>
                   Principais desafios obtidos na construção dessa aplicação{" "}
                 </TextComponent>
-                <ul className="text-lg">
+                <ul className="text-lg max-sm:w-md max-w-4xl text-balance">
                   {projeto.challenges.map((item, index) => (
                     <motion.li
                       {...fadeLeft}
@@ -126,11 +140,7 @@ export default async function Project({ params }: ProjectPageProps) {
             <div className="flex gap-4 items-center justify-center mt-8">
               <motion.div {...fadeRight} transition={{ delay: 0.2 }}>
                 <Button>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={projeto.onLine}
-                  >
+                  <Link target="_blank" href={projeto.onLine}>
                     Projeto Online
                   </Link>
                   <Li />
@@ -148,18 +158,6 @@ export default async function Project({ params }: ProjectPageProps) {
                   <Github />
                 </Button>
               </motion.div>
-            </div>
-            <p className="mt-6">Tecnologias usadas nesse projeto:</p>
-            <div className="flex flex-wrap gap-2 h-auto mt-4">
-              {projeto.technologies.map((tech, index) => (
-                <motion.div
-                  key={index}
-                  {...fadeRight}
-                  transition={{ delay: 0.1 * index }}
-                >
-                  <Badge>{tech}</Badge>
-                </motion.div>
-              ))}
             </div>
           </div>
           <CallAction />

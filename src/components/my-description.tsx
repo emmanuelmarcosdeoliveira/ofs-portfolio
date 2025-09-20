@@ -53,13 +53,13 @@ export default function MyDescription() {
               <span className="text-primary font-medium">
                 Redes de computadores
               </span>{" "}
-              pela faculdade UniSntn'Anna com experiência em
+              pela faculdade UniSant&apos;Anna com experiência em
               <span className="text-primary font-medium">
                 {" "}
                 trabalho em equipe e resolução de problemas
               </span>{" "}
-              como desenvolvedor front-end quero criar experiências digitais
-              modernas, intuitivas e funcionais.
+              como desenvolvedor front-end meu objetivo é criar experiências
+              digitais modernas, intuitivas e funcionais.
             </motion.p>
             <motion.p {...fadeUp} transition={{ delay: 0.4, duration: 0.4 }}>
               Venho desenvolvendo interfaces web com tecnologias como{" "}
@@ -71,10 +71,8 @@ export default function MyDescription() {
               funcionais.
             </motion.p>{" "}
             <motion.p {...fadeUp} transition={{ delay: 0.6, duration: 0.6 }}>
-              Atualmente, meu foco está em desenvolver interfaces responsivas,
-              acessíveis e de alta performance. Acredito que unir um design bem
-              pensado com um código de qualidade é o caminho para entregar
-              produtos digitais de impacto.
+              Acredito que unir um design bem pensado com um código de qualidade
+              é o caminho para entregar produtos digitais de impacto.
             </motion.p>
           </div>
         </div>
