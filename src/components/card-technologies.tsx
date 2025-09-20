@@ -35,7 +35,7 @@ export default function CardTechnologies() {
                 {...fadeRight}
                 transition={{ delay: 0.1 + i * 0.1 }}
                 key={tec.id}
-                className="grid cursor-pointer  grayscale-100 hover:grayscale-0   z-10 relative first:col-span-2 first:row-span-3    group transition-transform  overflow-hidden   bg-neutral-300 dark:bg-neutral-800  ease-in-out dark:hover:bg-linear-to-b  shadow-xs  to-black  justify-center items-center"
+                className="grid cursor-pointer  dark:grayscale-100 dark:hover:grayscale-0   z-10 relative first:col-span-2 first:row-span-3    group transition-transform  overflow-hidden   bg-neutral-200 dark:bg-neutral-800  ease-in-out dark:hover:bg-linear-to-b  shadow-xs  to-black  justify-center items-center"
               >
                 <Link href={tec.url} target="_blank">
                   <div className="p-6">
@@ -64,7 +64,7 @@ export default function CardTechnologies() {
                 {...fadeLeft}
                 transition={{ delay: 0.1 + i * 0.1 }}
                 key={tec.id}
-                className="grid cursor-pointer  grayscale-100 hover:grayscale-0   z-10 relative first:col-span-2 first:row-span-3    group transition-transform  overflow-hidden   bg-neutral-300 dark:bg-zinc-800  ease-in-out dark:hover:bg-linear-to-b  shadow-xs  to-black  justify-center items-center"
+                className="grid cursor-pointer  dark:grayscale-100 dark:hover:grayscale-0   z-10 relative first:col-span-2 first:row-span-3    group transition-transform  overflow-hidden   bg-neutral-200 dark:bg-zinc-800  ease-in-out dark:hover:bg-linear-to-b  shadow-xs  to-black  justify-center items-center"
               >
                 <Link href={tec.url} target="_blank">
                   <div className="p-6">

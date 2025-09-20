@@ -4,7 +4,7 @@ import React from "react";
 export const textVariants = cva("font-sans text-foreground", {
   variants: {
     variant: {
-      "title-xl": "text-3xl leading-5 text-primary",
+      "title-xl": "text-3xl leading-5 text-primary font-medium",
       "title-lg": "text-2xl font-medium text-muted-foreground",
       "title-md": "text-xl font-semibold text-primary",
       "sub-title": "text-xl font-medium pt-4",

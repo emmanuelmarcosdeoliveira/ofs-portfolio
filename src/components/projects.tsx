@@ -29,8 +29,9 @@ export default function Projects() {
                 <span className="max-sm:hidden"> ao lado</span>{" "}
                 <span className="md:hidden">abaixo</span> estão os projetos que
                 se{" "}
-                <strong className="font-light text-primary">Destacam </strong>
-                clique em <span className="text-primary">saiba mais</span> e
+                <strong className="font-medium text-primary">Destacam </strong>
+                clique em{" "}
+                <span className="text-primary font-medium">saiba mais</span> e
                 veja os detalhes.Ou acesse <strong>Projetos</strong> e vejam
                 todos os meus Projetos
               </motion.p>

@@ -24,7 +24,7 @@ export default function Menu() {
             </span>
           </Link>
         </div>
-        <nav className="*:hover:text-muted-foreground *:p-1 flex gap-4 items-center text-md max-sm:text-[13px] font-serif  transition-all">
+        <nav className="*:hover:text-muted-foreground *:p-1 flex gap-4 items-center text-md max-sm:text-[13px] font-semibold font-serif  transition-all">
           {linksMenu.pages.map((page) => (
             <Link
               key={page.id}

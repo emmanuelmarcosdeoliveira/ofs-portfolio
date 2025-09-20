@@ -163,7 +163,7 @@ export default function CardFlipLandingPage({
                 "transition-all duration-300",
                 "bg-gradient-to-r from-zinc-100 via-zinc-100 to-zinc-100",
                 "dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800",
-                "hover:from-orange-500/10 hover:from-0% hover:via-orange-500/5 hover:via-100% hover:to-transparent hover:to-100%",
+                "hover:from-blue-500/10 hover:from-0% hover:via-blue-500/5 hover:via-100% hover:to-transparent hover:to-100%",
                 "dark:hover:from-primary/20 dark:hover:from-0% dark:hover:via-primary/10 dark:hover:via-100% dark:hover:to-transparent dark:hover:to-100%",
                 "hover:scale-[1.02] hover:cursor-pointer"
               )}

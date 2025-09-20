@@ -17,7 +17,7 @@ export default function HeroSection() {
       </div>
       <Spotlight />
       <div className="flex animate-fade-in-intro flex-col gap-6 lg:gap-4 mt-40 w-full">
-        <div className="dark:text-primary flex flex-col font-bold gap-2 items-center justify-center text-center text-destructive text-lg">
+        <div className="dark:text-primary flex flex-col font-bold gap-2 items-center justify-center text-center text-primary text-lg">
           Desenvolvedor
           <span className="inline-flex justify-center">
             {" "}
@@ -25,14 +25,14 @@ export default function HeroSection() {
           </span>{" "}
         </div>
         <SplitText
-          className=" text-primary  font-semibold font-serif max-sm:text-4xl md:text-7xl"
+          className=" text-primary font-semibold  max-sm:text-4xl md:text-7xl"
           text="Emmanuel Oliveira"
         />
         <span className="-top-4 left-1 relative text-center text-muted-foreground/50 text-xs">
           &copy; Oliveirafullstack
         </span>
         <div className="dark:text-foreground/50">
-          <p className="lg:text-2xl relative px-4 z-20 font-medium text-transparent bg-gradient-to-r dark:from-cyan-100 from-gray-900 via-orange-300 dark:via-gray-400 dark:to-cyan-300 to-gray-600 bg-clip-text animate-gradient animate-fade-in-scale lg:text-balance max-sm:text-xl max-w-6xl mx-auto text-center text-xl">
+          <p className="lg:text-2xl relative px-4 z-20 font-medium dark:text-transparent bg-gradient-to-r dark:from-cyan-100 dark:via-gray-400 dark:to-cyan-300  bg-clip-text animate-gradient animate-fade-in-scale lg:text-balance max-sm:text-xl max-w-6xl mx-auto text-center text-xl">
             Desenvolvedor Front-end com experiência prática em React, Next.js e
             TypeScript, desenvolvo aplicações web modernas, completas e
             escaláveis, integrando Front-end e Back-end com boas práticas de

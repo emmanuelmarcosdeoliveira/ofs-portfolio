@@ -8,23 +8,23 @@ import LogoLoop from "../components/ui/LogoLoop";
 
 const techLogos = [
   {
-    node: <SiReact className="text-muted-foreground" />,
+    node: <SiReact />,
     title: "React",
     href: "https://react.dev",
   },
 
   {
-    node: <SiNextdotjs className="text-muted-foreground" />,
+    node: <SiNextdotjs />,
     title: "Next.js",
     href: "https://nextjs.org",
   },
   {
-    node: <SiTypescript className="text-muted-foreground" />,
+    node: <SiTypescript />,
     title: "TypeScript",
     href: "https://www.typescriptlang.org",
   },
   {
-    node: <SiTailwindcss className="text-muted-foreground" />,
+    node: <SiTailwindcss />,
     title: "Tailwind CSS",
     href: "https://tailwindcss.com",
   },

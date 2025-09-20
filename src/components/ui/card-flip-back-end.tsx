@@ -163,7 +163,7 @@ export default function CardFlipBackEnd({
                 "transition-all duration-300",
                 "bg-gradient-to-r from-zinc-100 via-zinc-100 to-zinc-100",
                 "dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800",
-                "hover:from-orange-500/10 hover:from-0% hover:via-orange-500/5 hover:via-100% hover:to-transparent hover:to-100%",
+                "hover:from-blue-500/10 hover:from-0% hover:via-blue-500/5 hover:via-100% hover:to-transparent hover:to-100%",
                 "dark:hover:from-primary/20 dark:hover:from-0% dark:hover:via-primary/10 dark:hover:via-100% dark:hover:to-transparent dark:hover:to-100%",
                 "hover:scale-[1.02] hover:cursor-pointer"
               )}
@@ -198,17 +198,17 @@ export default function CardFlipBackEnd({
           0% {
             transform: scale(2);
             opacity: 0;
-            box-shadow: 0px 0px 50px oklch(0.706 0.1583 44.118); /* Light Mode */
+            box-shadow: 0px 0px 50px oklch(0.5074 0.2097 263.63); /* Light Mode */
           }
           50% {
             transform: translate(0px, -5px) scale(1);
             opacity: 1;
-            box-shadow: 0px 8px 20px oklch(0.706 0.1583 44.118);
+            box-shadow: 0px 8px 20px oklch(0.5074 0.2097 263.63);
           }
           100% {
             transform: translate(0px, 5px) scale(0.1);
             opacity: 0;
-            box-shadow: 0px 10px 20px oklch(0.706 0.1583 44.118 / 0);
+            box-shadow: 0px 10px 20px oklch(0.5074 0.2097 263.63);
           }
         }
 

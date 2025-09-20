@@ -46,12 +46,16 @@ export default function Tablist() {
                 alt={proj.name}
               />
               {proj.destaque && (
-                <Badge className="absolute bottom-28 left-0 flex bg-transparent border border-primary/30 text-muted-foreground">
+                <Badge className="absolute bottom-32 left-0 flex bg-transparent border border-primary/30 text-muted-foreground">
                   Destaque
                 </Badge>
               )}
-              <h1 className="mb-2  text-2xl text-primary">{proj.name}</h1>
-              <p className="max-w-[360px] mt-2 truncate">{proj.description}</p>
+              <h1 className="mb-2  text-2xl font-medium text-primary">
+                {proj.name}
+              </h1>
+              <p className="max-w-[360px] line-clamp-2  mt-2">
+                {proj.description}
+              </p>
               <Button className="pt-4 px-0" variant={"link"} asChild>
                 <Link href={`/projeto/${proj.slug}`}>Saiba mais</Link>
               </Button>
