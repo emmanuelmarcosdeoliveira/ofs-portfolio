@@ -3,14 +3,12 @@
 import { linksMenu } from "@/constants/linksMenu";
 import { ArrowUp } from "lucide-react";
 import { motion } from "motion/react";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 import Contacts from "./contacts";
 import SocialMedia from "./social-media";
 import { Button } from "./ui/button";
 
 export default function Footer() {
-  const { theme } = useTheme();
   const currentYear: number = new Date().getFullYear();
   return (
     <section className="bg-muted  relative p-4">
