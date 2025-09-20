@@ -33,9 +33,8 @@ export default async function Project({ params }: ProjectPageProps) {
   if (!projeto) return notFound();
   const funcionalidades = projeto.features.length;
   const desafios = projeto.challenges.length;
-    <section className="overflow-hidden px-4">
   return (
-    <>
+    <section className="overflow-hidden container mx-auto px-4">
       <motion.div {...fadeUp} transition={{ duration: 0.3, delay: 0.3 }}>
         <Image
           className="flex h-[800px] justify-center max-sm:h-auto mb-12 object-contain pt-24 w-full z-10"
@@ -47,8 +46,8 @@ export default async function Project({ params }: ProjectPageProps) {
           priority
         />
       </motion.div>
-      <div className="container flex flex-col mx-auto py-16 w-screen">
-       <motion.div
+      <div className="container flex flex-col mx-auto max-sm:py-6 py-16 w-screen">
+        <motion.div
           {...fadeLeft}
           transition={{ delay: 0.2 }}
           className="flex items-start justify-start mb-4"
@@ -64,109 +63,102 @@ export default async function Project({ params }: ProjectPageProps) {
             </Link>
           </Button>
         </motion.div>
-        <div>
-          <div className="flex flex-col gap-2 items-start justify-center">
-            <motion.h1
+      </div>
+      <div className="flex flex-col gap-2 items-start justify-center">
+        <motion.h1
+          {...fadeRight}
+          transition={{ delay: 0.3 }}
+          className="font-serif max-sm:text-4xl md:text-5xl text-6xl text-bold text-center text-primary"
+        >
+          {projeto.name}
+        </motion.h1>
+      </div>
+      <div className="flex flex-col  justify-center mt-4">
+        <motion.p
+          {...fadeDown}
+          transition={{ delay: 0.3 }}
+          className="leading-relaxed max-sm:w-sm max-w-4xl text-balance text-xl"
+        >
+          {projeto.description}
+        </motion.p>
+        <p className="mt-6">Tecnologias usadas nesse projeto:</p>
+        <div className=" flex flex-wrap gap-2 h-auto mt-4">
+          {projeto.technologies.map((tech, index) => (
+            <motion.div
+              className="flex flex-wrap justify-items-start"
+              key={index}
               {...fadeRight}
-              transition={{ delay: 0.3 }}
-              className="font-serif max-sm:text-4xl md:text-5xl text-6xl text-bold text-center text-primary"
+              transition={{ delay: 0.1 * index }}
             >
-              {projeto.name}
-            </motion.h1>
-          </div>
-          <div className="flex flex-col items-start justify-center mt-4">
-            <motion.p
-              {...fadeDown}
-              transition={{ delay: 0.3 }}
-              className="leading-relaxed max-sm:w-sm max-w-4xl text-balance text-xl"
-            >
-              {projeto.description}
-            </motion.p>
-           <p className="mt-6">Tecnologias usadas nesse projeto:</p>
-            <div className="flex flex-wrap gap-2 h-auto mt-4">
-              {projeto.technologies.map((tech, index) => (
-                <motion.div
-                 className="flex justify-items-start"
-                  key={index}
-                  {...fadeRight}
-                  transition={{ delay: 0.1 * index }}
-                >
-                  <Badge>{tech}</Badge>
-                </motion.div>
-              ))}
-            </div>
-
-            {funcionalidades > 0 && (
-              <motion.div {...fadeLeft}>
-                <TextComponent className="pt-6 " variant={"title-md"}>
-                  Principais características{" "}
-                </TextComponent>
-                <ul className="text-lg leading-relaxed max-sm:w-md max-w-4xl text-balance">
-                  {projeto.features.map((item, index) => (
-                    <motion.li
-                      {...fadeLeft}
-                      transition={{ delay: 0.1 * index }}
-                      className=" ml-4 max-sm:w-sm my-2 list-disc"
-                     key={index}
-                    >
-                      {item}
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            )}
-
-            {desafios > 0 && (
-              <>
-
-                <TextComponent
-                  className="pt-6  max-sm:w-sm"
-                  variant={"title-md"}
-                >
-
-                  Principais desafios obtidos na construção dessa aplicação{" "}
-                </TextComponent>
-                <ul className="text-lg max-sm:w-md max-w-4xl text-balance">
-                  {projeto.challenges.map((item, index) => (
-                    <motion.li
-                      {...fadeLeft}
-                      transition={{ delay: 0.1 * index }}
-                      className=" ml-4 max-sm:w-sm my-2 list-disc"
-                      key={index}
-                    >
-                      {item}
-                    </motion.li>
-                  ))}
-                </ul>
-              </>
-            )}
-
-            <div className="flex gap-4 items-center justify-center mt-8">
-              <motion.div {...fadeRight} transition={{ delay: 0.2 }}>
-                <Button>
-                  <Link target="_blank" href={projeto.onLine}>
-                    Projeto Online
-                  </Link>
-                  <Li />
-                </Button>
-              </motion.div>
-              <motion.div {...fadeLeft} transition={{ delay: 0.3 }}>
-                <Button>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={projeto.gitHub}
-                  >
-                    GitHub
-                  </Link>
-                  <Github />
-                </Button>
-              </motion.div>
-            </div>
-          </div>
-          <CallAction />
+              <Badge>{tech}</Badge>
+            </motion.div>
+          ))}
         </div>
-      </section>
-    </>
+
+        {funcionalidades > 0 && (
+          <motion.div {...fadeLeft}>
+            <TextComponent className="pt-6 " variant={"title-md"}>
+              Principais características{" "}
+            </TextComponent>
+            <ul className="text-lg leading-relaxed max-sm:w-md max-w-4xl text-balance">
+              {projeto.features.map((item, index) => (
+                <motion.li
+                  {...fadeLeft}
+                  transition={{ delay: 0.1 * index }}
+                  className=" ml-4 max-sm:w-sm my-2 list-disc"
+                  key={index}
+                >
+                  {item}
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+
+        {desafios > 0 && (
+          <>
+            <TextComponent className="pt-6  max-sm:w-sm" variant={"title-md"}>
+              Principais desafios obtidos na construção dessa aplicação{" "}
+            </TextComponent>
+            <ul className="text-lg max-sm:w-md max-w-4xl text-balance">
+              {projeto.challenges.map((item, index) => (
+                <motion.li
+                  {...fadeLeft}
+                  transition={{ delay: 0.1 * index }}
+                  className=" ml-4 max-sm:w-sm my-2 list-disc"
+                  key={index}
+                >
+                  {item}
+                </motion.li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        <div className="flex gap-4 items-center justify-start mt-8">
+          <motion.div {...fadeRight} transition={{ delay: 0.2 }}>
+            <Button>
+              <Link target="_blank" href={projeto.onLine}>
+                Projeto Online
+              </Link>
+              <Li />
+            </Button>
+          </motion.div>
+          <motion.div {...fadeLeft} transition={{ delay: 0.3 }}>
+            <Button>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href={projeto.gitHub}
+              >
+                GitHub
+              </Link>
+              <Github />
+            </Button>
+          </motion.div>
+        </div>
+      </div>
+      <CallAction />
+    </section>
   );
 }
