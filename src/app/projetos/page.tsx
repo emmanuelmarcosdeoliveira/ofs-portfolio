@@ -1,8 +1,7 @@
+import CallAction from "@/components/call-action";
 import Tablist from "@/components/tab-list";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Spotlight } from "@/components/ui/spotlight";
 import { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "OFS | Projetos",
@@ -11,21 +10,25 @@ export const metadata: Metadata = {
 
 export default function Projetos() {
   return (
-    <section className="container mx-auto p-4 py-16">
-      <h1 className="max-sm:text-left max-sm:text-xl max-w-4xl mx-auto pt-24 text-2xl text-balance text-center text-muted-foreground">
-        Aqui você poderá ver alguns dos trabalhos que desenvolvi. Navegue a
-        vontade explore os projetos para ver como foram criados, as tecnologias
-        utilizadas e as funcionalidades implementadas{" "}
-      </h1>
-
-      <Tablist />
-
-      <div className="flex items-center justify-center mt-8">
-        <Button>
-          <ArrowRight />
-          <Link href={"/"}>Voltar a Home</Link>
-        </Button>
+    <section className="container overflow-hidden mx-auto px-4 py-16">
+      <Spotlight />
+      <div className="flex flex-col items-center justify-center">
+        <h1
+          className=" pt-16 text-4xl text-center text-primary
+             "
+        >
+          Meus Projetos
+        </h1>
+        <span className="max-w-3xl py-8 text-balance text-center text-lg">
+          Aqui você poderá ver alguns dos trabalhos que desenvolvi. Navegue a
+          vontade explore os projetos para ver como foram criados, as
+          tecnologias utilizadas e as funcionalidades implementadas.{" "}
+        </span>
       </div>
+      <div className="pb-16">
+        <Tablist />
+      </div>
+      <CallAction />
     </section>
   );
 }

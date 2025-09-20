@@ -1,17 +1,26 @@
 import Footer from "@/components/footer";
 import Menu from "@/components/menu";
+import { ThemeProvider } from "@/components/provider/theme-provider";
+import { GridBackground } from "@/components/ui/grid-background";
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
-import { Geist, Roboto } from "next/font/google";
+import { JetBrains_Mono, Montserrat, Oxanium } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
-const geist = Geist({
-  variable: "--font-geist",
+const oxanium = Oxanium({
+  variable: "--font-oxanium",
+  weight: ["400", "600", "700", "800"],
   subsets: ["latin"],
 });
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const jetBrainsMono = JetBrains_Mono({
+  weight: ["400", "700"],
+  variable: "--font-jetBrainsMono",
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -52,14 +61,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" lang="pt-BR" suppressHydrationWarning>
-      <body className={`${geist.variable} ${roboto.variable} antialiased`}>
+    <html
+      className="scroll-smooth"
+      data-scroll-behavior="smooth"
+      lang="pt-BR"
+      suppressHydrationWarning
+    >
+      <body
+        className={`${jetBrainsMono.variable} ${montserrat.variable} overflow-x-hidden ${oxanium} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster />
+          <GridBackground />
           <Menu />
 
           {children}

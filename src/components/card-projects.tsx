@@ -7,7 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { MoveUpRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Badge } from "./ui/badge";
@@ -17,11 +16,13 @@ interface CardProductsProps {
   slug?: string;
   name: string;
   description: string;
+  destaque?: boolean;
   imageURL: string | StaticImageData;
   images?: string | StaticImageData;
+  challenges?: string[];
   online?: string;
   gitHub?: string;
-  destaque?: boolean;
+  features?: string[];
   type?: string;
   technologies: string[];
 }
@@ -55,26 +56,22 @@ export function CardProjects({
           </Badge>
         )}
         <CardTitle className="text-2xl">{name}</CardTitle>
-        <CardDescription className="truncate">
-          <p className="text-lg truncate">{description}</p>
+        <CardDescription className="h-12 overflow-y-hidden">
+          <p className="line-clamp-2 text-lg">{description}</p>
         </CardDescription>
         <CardAction> </CardAction>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-wrap gap-2 h-full max-h-20">
+        <div className="flex flex-wrap gap-2 h-full line-clamp-2">
           {technologies?.map((tec) => (
             <Badge key={tec}>{tec}</Badge>
           ))}
         </div>
-        <div className="pt-4"></div>
       </CardContent>
       <CardFooter>
         <div>
-          <Button variant="outline" asChild>
-            <Link href={`/projeto/${slug}`}>
-              Saiba Mais
-              <MoveUpRight />
-            </Link>
+          <Button className="mt-2 px-0" variant="link" asChild>
+            <Link href={`/projeto/${slug}`}>Saiba Mais</Link>
           </Button>
         </div>
       </CardFooter>

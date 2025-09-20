@@ -1,21 +1,42 @@
+"use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { projetos } from "@/constants/projects";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 
 export default function Tablist() {
   return (
-    <Tabs defaultValue="full" className="w-full">
+    <Tabs defaultValue="full" className="w-full overflow-hidden">
       <TabsList className="bg-background flex gap-8 justify-center mt-8 mx-auto">
-        <TabsTrigger value="full">Todos</TabsTrigger>
-        <TabsTrigger value="frontend">Front-end</TabsTrigger>
-        <TabsTrigger value="fullstack">FullStack</TabsTrigger>
+        <TabsTrigger className="text-lg" value="full">
+          Todos
+        </TabsTrigger>
+        <TabsTrigger className="text-lg" value="frontend">
+          Front-end
+        </TabsTrigger>
+        <TabsTrigger className="text-lg" value="fullstack">
+          FullStack
+        </TabsTrigger>
       </TabsList>
+      <p className="-pt-1 text-center text-muted-foreground text-sm">
+        Filtre por tecnologias ou explore todos os projetos
+      </p>
       <TabsContent value="full">
-        <div className="gap-8 grid justify-center lg:grid-cols-3 md:grid-cols-2 overflow-hidden pt-8 rounded-md">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ delay: 0.5 }}
+          className="flex flex-wrap gap-8 justify-center overflow-hidden pt-8 rounded-md"
+        >
           {projetos.map((proj) => (
-            <div className="overflow-hidden rounded-lg" key={proj.slug}>
+            <div
+              className=" relative overflow-hidden rounded-lg"
+              key={proj.slug}
+            >
               <Image
                 className="h-[320px] object-cover rounded-lg w-full"
                 key={proj.slug}
@@ -24,21 +45,39 @@ export default function Tablist() {
                 src={proj.imageURL}
                 alt={proj.name}
               />
-              <h1 className="text-2xl text-primary">{proj.name}</h1>
-              <p className="h-10 max-w-[360px] truncate">{proj.description}</p>
+              {proj.destaque && (
+                <Badge className="absolute bottom-32 left-0 flex bg-transparent border border-primary/30 text-muted-foreground">
+                  Destaque
+                </Badge>
+              )}
+              <h1 className="mb-2  text-2xl font-medium text-primary">
+                {proj.name}
+              </h1>
+              <p className="max-w-[360px] line-clamp-2  mt-2">
+                {proj.description}
+              </p>
               <Button className="pt-4 px-0" variant={"link"} asChild>
                 <Link href={`/projeto/${proj.slug}`}>Saiba mais</Link>
               </Button>
             </div>
           ))}
-        </div>
+        </motion.div>
       </TabsContent>
       <TabsContent value="frontend">
-        <div className="flex flex-wrap gap-8 justify-center overflow-hidden pt-8 rounded-md">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ delay: 0.5 }}
+          className="flex flex-wrap gap-8 justify-center overflow-hidden pt-8 rounded-md"
+        >
           {projetos
             .filter((proj) => proj.type === "front-end")
             .map((proj) => (
-              <div className="overflow-hidden rounded-lg" key={proj.slug}>
+              <div
+                className=" relative overflow-hidden rounded-lg"
+                key={proj.slug}
+              >
                 <Image
                   className="h-[320px] object-cover rounded-lg w-full"
                   key={proj.slug}
@@ -47,7 +86,12 @@ export default function Tablist() {
                   src={proj.imageURL}
                   alt={proj.name}
                 />
-                <h1 className="mb-2 text-2xl text-primary">{proj.name}</h1>
+                {proj.destaque && (
+                  <Badge className="absolute bottom-28 left-0 flex bg-transparent border border-primary/30 text-muted-foreground">
+                    Destaque
+                  </Badge>
+                )}
+                <h1 className="mb-2  text-2xl text-primary">{proj.name}</h1>
                 <p className="max-w-[360px] mt-2 truncate">
                   {proj.description}
                 </p>
@@ -56,15 +100,23 @@ export default function Tablist() {
                 </Button>
               </div>
             ))}
-        </div>
+        </motion.div>
       </TabsContent>
-
       <TabsContent value="fullstack">
-        <div className="flex flex-wrap gap-8 justify-center overflow-hidden pt-8 rounded-md">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ delay: 0.5 }}
+          className="flex flex-wrap gap-8 justify-center overflow-hidden pt-8 rounded-md"
+        >
           {projetos
             .filter((proj) => proj.type === "fullstack")
             .map((proj) => (
-              <div className="overflow-hidden rounded-lg" key={proj.slug}>
+              <div
+                className=" relative overflow-hidden rounded-lg"
+                key={proj.slug}
+              >
                 <Image
                   className="h-[320px] object-cover rounded-lg w-full"
                   key={proj.slug}
@@ -73,13 +125,21 @@ export default function Tablist() {
                   src={proj.imageURL}
                   alt={proj.name}
                 />
-                <h1 className="mb-4 text-primary">{proj.name}</h1>
+                {proj.destaque && (
+                  <Badge className="absolute bottom-28 left-0 flex bg-transparent border border-primary/30 text-muted-foreground">
+                    Destaque
+                  </Badge>
+                )}
+                <h1 className="mb-2  text-2xl text-primary">{proj.name}</h1>
                 <p className="max-w-[360px] mt-2 truncate">
                   {proj.description}
                 </p>
+                <Button className="pt-4 px-0" variant={"link"} asChild>
+                  <Link href={`/projeto/${proj.slug}`}>Saiba mais</Link>
+                </Button>
               </div>
             ))}
-        </div>
+        </motion.div>
       </TabsContent>
     </Tabs>
   );

@@ -4,6 +4,8 @@ class Project {
   description: string;
   imageURL: string;
   images: string[];
+  features: string[];
+  challenges: string[];
   onLine: string;
   gitHub: string;
   destaque: boolean;
@@ -16,6 +18,8 @@ class Project {
     description: string,
     imageURL: string,
     images: string[],
+    features: string[],
+    challenges: string[],
     onLine: string,
     gitHub: string,
     destaque: boolean,
@@ -27,6 +31,8 @@ class Project {
     this.description = description;
     this.imageURL = imageURL;
     this.images = images;
+    this.features = features;
+    this.challenges = challenges;
     this.onLine = onLine;
     this.gitHub = gitHub;
     this.destaque = destaque;

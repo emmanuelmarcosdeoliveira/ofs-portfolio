@@ -1,3 +1,5 @@
+"use client";
+
 import { ThemeSwitch } from "@/components/ui/theme-switch";
 import { Moon, Sun } from "lucide-react";
 

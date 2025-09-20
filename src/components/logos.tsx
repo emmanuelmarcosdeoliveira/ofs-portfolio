@@ -29,9 +29,9 @@ const techLogos = [
     href: "https://tailwindcss.com",
   },
 ];
-export default function LogoLoopExample() {
+export default function LogoLoopComponents() {
   return (
-    <div style={{ height: "120px", position: "relative", overflow: "hidden" }}>
+    <div className="h-32 relative my-16  overflow-hidden">
       <LogoLoop
         logos={techLogos}
         speed={120}
@@ -41,7 +41,7 @@ export default function LogoLoopExample() {
         pauseOnHover
         scaleOnHover
         fadeOut
-        fadeOutColor="#f7f9f7"
+        fadeOutColor="oklch(1 0 129.63 / 10.62%)"
         ariaLabel="Technology partners"
       />
     </div>

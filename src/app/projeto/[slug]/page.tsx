@@ -1,106 +1,168 @@
-// src/app/projeto/[slug]/page.tsx
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { IntroSection } from "@/components/intro-section";
+import CallAction from "@/components/call-action";
+import TextComponent from "@/components/text";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { projetos } from "@/constants/projects";
-import { ArrowRight, Github, Link as Li } from "lucide-react";
-
-// Metadata da página
+import {
+  fadeDown,
+  fadeLeft,
+  fadeRight,
+  fadeUp,
+} from "@/styles/animationMotion";
+import { ArrowLeft, Github, Link as Li } from "lucide-react";
+import * as motion from "motion/react-client";
 export const metadata: Metadata = {
   title: "Portfolio Emmanuel Oliveira | Projeto",
   description: "Página de descrição dos Projetos de Emmanuel Oliveira | OFS",
 };
 
-// Tipagem correta para Next.js 15 App Router
 interface ProjectPageProps {
   params: Promise<{
     slug: string;
   }>;
 }
 
-// Função async para permitir Server Component
 export default async function Project({ params }: ProjectPageProps) {
-  // Aguarda a resolução dos parâmetros (Next.js 15)
   const { slug } = await params;
-
-  // Busca projeto pelo slug
   const projeto = projetos.find((p) => p.slug === slug);
-
-  // Retorna 404 caso não encontre
   if (!projeto) return notFound();
-
+  const funcionalidades = projeto.features.length;
+  const desafios = projeto.challenges.length;
+  console.log(desafios);
   return (
-    <section className="flex flex-col relative w-screen">
-      {/* Banner do projeto */}
-      <div className="h-[600px] inset-0 relative w-full">
+    <>
+      <motion.div {...fadeUp} transition={{ duration: 0.3, delay: 0.3 }}>
         <Image
-          className="absolute flex h-[600px] justify-center object-contain w-full z-10"
+          className="flex h-[800px] justify-center max-sm:h-auto mb-12 object-contain pt-24 w-full z-10"
           width={800}
           height={600}
           src={projeto.images[0]}
           alt={projeto.name}
-          // Se for URL externa, habilitar permissões no next.config.js
           unoptimized={true}
           priority
         />
-      </div>
+      </motion.div>
 
-      {/* Conteúdo do projeto */}
-      <div className="container mx-auto p-4">
-        <div className="flex flex-col gap-2 items-start justify-center">
-          <IntroSection title="Projeto" />
-          <h1 className="font-serif text-2xl text-center text-primary">
-            {projeto.name}
-          </h1>
-        </div>
-
-        <div className="flex flex-col items-start justify-center mt-4">
-          <p className="leading-relaxed max-sm:w-xs max-w-4xl text-balance text-xl">
-            {projeto.description}
-          </p>
-
-          <div className="flex gap-4 items-center justify-center mt-8">
-            <Button>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href={projeto.onLine}
-              >
-                Projeto Online
-              </Link>
-              <Li />
-            </Button>
-
-            <Button>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href={projeto.gitHub}
-              >
-                GitHub
-              </Link>
-              <Github />
-            </Button>
-          </div>
-
-          <p className="mt-6">Tecnologias usadas nesse projeto:</p>
-          <div className="flex flex-wrap gap-2 h-auto mt-4">
-            {projeto.technologies.map((tech, index) => (
-              <Badge key={index}>{tech}</Badge>
-            ))}
-          </div>
-
-          <Button className="mt-8">
-            <ArrowRight />
-            <Link href={"/"}>Voltar à Home</Link>
+      <section className="container px-4 flex flex-col mx-auto py-16 w-screen">
+        <motion.div
+          {...fadeLeft}
+          transition={{ delay: 0.2 }}
+          className="flex items-start justify-start mb-4"
+        >
+          <Button
+            asChild
+            variant="link"
+            className="cursor-pointer flex flex-start text-muted-foreground"
+          >
+            <Link href={"/projetos"}>
+              <ArrowLeft />
+              Voltar para projetos
+            </Link>
           </Button>
+        </motion.div>
+        <div className="">
+          <div className="flex flex-col gap-2 items-start justify-center">
+            <motion.h1
+              {...fadeRight}
+              transition={{ delay: 0.3 }}
+              className="font-serif max-sm:text-4xl md:text-5xl text-6xl text-bold text-center text-primary"
+            >
+              {projeto.name}
+            </motion.h1>
+          </div>
+          <div className="flex flex-col items-start justify-center mt-4">
+            <motion.p
+              {...fadeDown}
+              transition={{ delay: 0.3 }}
+              className="leading-relaxed max-sm:w-md max-w-4xl text-balance text-xl"
+            >
+              {projeto.description}
+            </motion.p>
+
+            <p className="mt-6">Tecnologias usadas nesse projeto:</p>
+            <div className="flex flex-wrap gap-2 h-auto mt-4">
+              {projeto.technologies.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  {...fadeRight}
+                  transition={{ delay: 0.1 * index }}
+                >
+                  <Badge>{tech}</Badge>
+                </motion.div>
+              ))}
+            </div>
+
+            {funcionalidades > 0 && (
+              <motion.div {...fadeLeft}>
+                <TextComponent className="pt-6 " variant={"title-md"}>
+                  Principais características{" "}
+                </TextComponent>
+                <ul className="text-lg leading-relaxed max-sm:w-md max-w-4xl text-balance">
+                  {projeto.features.map((item, index) => (
+                    <motion.li
+                      {...fadeLeft}
+                      transition={{ delay: 0.1 * index }}
+                      className=" ml-4 my-2 list-disc"
+                      key={index}
+                    >
+                      {item}
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+
+            {desafios > 0 && (
+              <>
+                <TextComponent className="pt-6" variant={"title-md"}>
+                  Principais desafios obtidos na construção dessa aplicação{" "}
+                </TextComponent>
+                <ul className="text-lg max-sm:w-md max-w-4xl text-balance">
+                  {projeto.challenges.map((item, index) => (
+                    <motion.li
+                      {...fadeLeft}
+                      transition={{ delay: 0.1 * index }}
+                      className=" ml-4 my-2 list-disc"
+                      key={index}
+                    >
+                      {item}
+                    </motion.li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            <div className="flex gap-4 items-center justify-center mt-8">
+              <motion.div {...fadeRight} transition={{ delay: 0.2 }}>
+                <Button>
+                  <Link target="_blank" href={projeto.onLine}>
+                    Projeto Online
+                  </Link>
+                  <Li />
+                </Button>
+              </motion.div>
+              <motion.div {...fadeLeft} transition={{ delay: 0.3 }}>
+                <Button>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={projeto.gitHub}
+                  >
+                    GitHub
+                  </Link>
+                  <Github />
+                </Button>
+              </motion.div>
+            </div>
+          </div>
+          <CallAction />
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
