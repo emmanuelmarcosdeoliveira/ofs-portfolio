@@ -33,7 +33,7 @@ export default async function Project({ params }: ProjectPageProps) {
   if (!projeto) return notFound();
   const funcionalidades = projeto.features.length;
   const desafios = projeto.challenges.length;
-  console.log(desafios);
+    <section className="overflow-hidden px-4">
   return (
     <>
       <motion.div {...fadeUp} transition={{ duration: 0.3, delay: 0.3 }}>
@@ -47,9 +47,8 @@ export default async function Project({ params }: ProjectPageProps) {
           priority
         />
       </motion.div>
-
-      <section className="container px-4 flex flex-col mx-auto py-16 w-screen">
-        <motion.div
+      <div className="container flex flex-col mx-auto py-16 w-screen">
+       <motion.div
           {...fadeLeft}
           transition={{ delay: 0.2 }}
           className="flex items-start justify-start mb-4"
@@ -65,7 +64,7 @@ export default async function Project({ params }: ProjectPageProps) {
             </Link>
           </Button>
         </motion.div>
-        <div className="">
+        <div>
           <div className="flex flex-col gap-2 items-start justify-center">
             <motion.h1
               {...fadeRight}
@@ -79,15 +78,15 @@ export default async function Project({ params }: ProjectPageProps) {
             <motion.p
               {...fadeDown}
               transition={{ delay: 0.3 }}
-              className="leading-relaxed max-sm:w-md max-w-4xl text-balance text-xl"
+              className="leading-relaxed max-sm:w-sm max-w-4xl text-balance text-xl"
             >
               {projeto.description}
             </motion.p>
-
-            <p className="mt-6">Tecnologias usadas nesse projeto:</p>
+           <p className="mt-6">Tecnologias usadas nesse projeto:</p>
             <div className="flex flex-wrap gap-2 h-auto mt-4">
               {projeto.technologies.map((tech, index) => (
                 <motion.div
+                 className="flex justify-items-start"
                   key={index}
                   {...fadeRight}
                   transition={{ delay: 0.1 * index }}
@@ -107,8 +106,8 @@ export default async function Project({ params }: ProjectPageProps) {
                     <motion.li
                       {...fadeLeft}
                       transition={{ delay: 0.1 * index }}
-                      className=" ml-4 my-2 list-disc"
-                      key={index}
+                      className=" ml-4 max-sm:w-sm my-2 list-disc"
+                     key={index}
                     >
                       {item}
                     </motion.li>
@@ -119,7 +118,12 @@ export default async function Project({ params }: ProjectPageProps) {
 
             {desafios > 0 && (
               <>
-                <TextComponent className="pt-6" variant={"title-md"}>
+
+                <TextComponent
+                  className="pt-6  max-sm:w-sm"
+                  variant={"title-md"}
+                >
+
                   Principais desafios obtidos na construção dessa aplicação{" "}
                 </TextComponent>
                 <ul className="text-lg max-sm:w-md max-w-4xl text-balance">
@@ -127,7 +131,7 @@ export default async function Project({ params }: ProjectPageProps) {
                     <motion.li
                       {...fadeLeft}
                       transition={{ delay: 0.1 * index }}
-                      className=" ml-4 my-2 list-disc"
+                      className=" ml-4 max-sm:w-sm my-2 list-disc"
                       key={index}
                     >
                       {item}
