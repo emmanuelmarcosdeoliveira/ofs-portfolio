@@ -12,13 +12,13 @@ export default function CallAction() {
       <motion.p
         {...fadeDown}
         transition={{ delay: 0.3 }}
-        className="text-2xl bg-linear-to-t dark:from-cyan-500 from-orange-300 dark:via-white dark:to-cyan-700 to-orange-600 text-transparent bg-clip-text pt-6 mx-auto max-w-2xl"
+        className="text-2xl bg-linear-to-t dark:from-cyan-500 from-blue-800 dark:via-white dark:to-cyan-700 to-blue-600 text-transparent bg-clip-text pt-6 mx-auto max-w-2xl"
       >
         Estou sempre em busca de novos desafios, quero uma oportunidades para
         surpreender e criar experiências digitais incríveis.
       </motion.p>
       <div className="py-6">
-        <Button asChild variant={"link"} size={"lg"}>
+        <Button className="font-bold" asChild variant={"link"} size={"lg"}>
           <Link
             href={
               "https://wa.me/5511968336094?text=Olá,%20vamos%20conversar%20sobre%20seu%20portfolio?"

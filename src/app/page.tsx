@@ -1,3 +1,4 @@
+import CallAction from "@/components/call-action";
 import CardServices from "@/components/card-services";
 import CardTechnologies from "@/components/card-technologies";
 import HeroSection from "@/components/hero-section";
@@ -14,6 +15,7 @@ export default function Home() {
       <LogoLoopComponents />
       <CardTechnologies />
       <Experiences />
+      <CallAction />
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import CallAction from "@/components/call-action";
 import Tablist from "@/components/tab-list";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Metadata } from "next";
@@ -24,7 +25,10 @@ export default function Projetos() {
           tecnologias utilizadas e as funcionalidades implementadas.{" "}
         </span>
       </div>
-      <Tablist />
+      <div className="pb-16">
+        <Tablist />
+      </div>
+      <CallAction />
     </section>
   );
 }
