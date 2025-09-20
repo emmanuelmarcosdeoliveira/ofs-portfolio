@@ -33,8 +33,9 @@ export default async function Project({ params }: ProjectPageProps) {
   if (!projeto) return notFound();
   const funcionalidades = projeto.features.length;
   const desafios = projeto.challenges.length;
-  return (
     <section className="overflow-hidden px-4">
+  return (
+    <>
       <motion.div {...fadeUp} transition={{ duration: 0.3, delay: 0.3 }}>
         <Image
           className="flex h-[800px] justify-center max-sm:h-auto mb-12 object-contain pt-24 w-full z-10"
@@ -46,9 +47,8 @@ export default async function Project({ params }: ProjectPageProps) {
           priority
         />
       </motion.div>
-
       <div className="container flex flex-col mx-auto py-16 w-screen">
-        <motion.div
+       <motion.div
           {...fadeLeft}
           transition={{ delay: 0.2 }}
           className="flex items-start justify-start mb-4"
@@ -82,12 +82,11 @@ export default async function Project({ params }: ProjectPageProps) {
             >
               {projeto.description}
             </motion.p>
-
-            <p className="mt-6">Tecnologias usadas nesse projeto:</p>
+           <p className="mt-6">Tecnologias usadas nesse projeto:</p>
             <div className="flex flex-wrap gap-2 h-auto mt-4">
               {projeto.technologies.map((tech, index) => (
                 <motion.div
-                  className="flex justify-items-start"
+                 className="flex justify-items-start"
                   key={index}
                   {...fadeRight}
                   transition={{ delay: 0.1 * index }}
@@ -108,7 +107,7 @@ export default async function Project({ params }: ProjectPageProps) {
                       {...fadeLeft}
                       transition={{ delay: 0.1 * index }}
                       className=" ml-4 max-sm:w-sm my-2 list-disc"
-                      key={index}
+                     key={index}
                     >
                       {item}
                     </motion.li>
@@ -119,10 +118,12 @@ export default async function Project({ params }: ProjectPageProps) {
 
             {desafios > 0 && (
               <>
+
                 <TextComponent
                   className="pt-6  max-sm:w-sm"
                   variant={"title-md"}
                 >
+
                   Principais desafios obtidos na construção dessa aplicação{" "}
                 </TextComponent>
                 <ul className="text-lg max-sm:w-md max-w-4xl text-balance">
@@ -165,7 +166,7 @@ export default async function Project({ params }: ProjectPageProps) {
           </div>
           <CallAction />
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

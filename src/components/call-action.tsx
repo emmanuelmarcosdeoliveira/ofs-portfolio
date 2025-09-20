@@ -7,6 +7,7 @@ export default function CallAction() {
   return (
     <div className="text-center pt-6">
       <motion.h2 {...fadeDown} className="text-muted-foreground text-3xl pt-4">
+
         Vamos trabalhar Juntos?
       </motion.h2>
       <motion.p
