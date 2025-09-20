@@ -10,13 +10,13 @@ export default function ListContact() {
   const myContact = [
     {
       type: "Email",
-      name: "oliveira.frontend@gmail.com",
+      name: "oliveirafullstack@gmail.com",
       icon: <Mail className="text-primary  " />,
-      href: "mailto:emmanuel.frontend@gmail.com",
+      href: "mailto:oliveirafullstack@gmail.com",
     },
     {
       type: "telefone",
-      name: "Telefone: +55(11) 96833-6094",
+      name: "Telefone: (11)96833-6094",
       icon: <Phone className="text-primary " />,
       href: "tel:+5511968336094",
     },
@@ -29,8 +29,8 @@ export default function ListContact() {
   return (
     <>
       <motion.div {...fadeUp} transition={{ delay: 0.3 }}>
-        <div className="  border-2 *: bg-muted dark:bg-muted/50 rounded-xl p-4">
-          <TextComponent variant={"title-lg"}>
+        <div className="border-2 bg-muted dark:bg-muted/50 rounded-xl p-4">
+          <TextComponent className="!text-foreground" variant={"title-lg"}>
             Informações de contato
           </TextComponent>
           <p>
@@ -42,7 +42,7 @@ export default function ListContact() {
                 {contact.icon}
               </span>
               <div>
-                <TextComponent className="font-bold">
+                <TextComponent className="font-bold !text-foreground">
                   {contact.type}
                 </TextComponent>
                 {contact.href ? (
@@ -54,7 +54,7 @@ export default function ListContact() {
             </div>
           ))}
         </div>
-        <TextComponent className="!font-light pt-8" variant={"title-md"}>
+        <TextComponent className="font-semibold pt-8" variant={"title-md"}>
           Ou nas redes sociais
         </TextComponent>
         <SocialMedia />

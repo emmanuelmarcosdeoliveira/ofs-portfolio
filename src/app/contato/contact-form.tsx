@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 import TextComponent from "../../components/text";
 import { Button } from "../../components/ui/button";
@@ -35,9 +36,10 @@ export default function ContactForm() {
     setLoading(true);
     try {
       await axios.post("/api/contact", data);
+      toast.success("Mensagem enviada com sucesso");
       reset();
     } catch {
-      alert("error");
+      toast.error("Erro ao enviar mensagem");
     } finally {
       setLoading(false);
     }
@@ -60,19 +62,31 @@ export default function ContactForm() {
           onSubmit={handleSubmit(onSubmit)}
           className="mt-6 flex  flex-col gap-4"
         >
+          <label className="text-sm font-bold ml-2" htmlFor="nome">
+            Nome
+          </label>
           <input
-            placeholder="Nome"
+            id="nome"
+            placeholder="digite seu Nome"
             className="w-full  h-14 bg-muted-foreground/10 focus:outline-none dark:bg-muted/50 overflow-hidden  p-3 rounded-lg focus:bg-none focus:ring-2 ring-primary    placeholder:muted-foreground"
             type="text"
             {...register("name")}
           />
+          <label className="text-sm font-bold ml-2" htmlFor="email">
+            E-mail
+          </label>
           <input
             type="email"
-            placeholder="digite seu a-mail"
+            id="email"
+            placeholder="digite seu e-mail"
             className="w-full h-14 bg-muted-foreground/10 border-none dark:bg-muted/50 overflow-hidden  p-3 rounded-lg focus:outline-none focus:ring-2 ring-primary    placeholder:muted-foreground"
             {...register("email")}
           />
+          <label className="text-sm font-bold ml-2" htmlFor="message">
+            Mensagem
+          </label>
           <textarea
+            id="message"
             placeholder="digite sua mensagem"
             maxLength={500}
             className="w-full h-[180px] bg-muted-foreground/10  focus:outline-none resize-none dark:bg-muted/50 overflow-hidden  p-3 rounded-lg focus:ring-2 ring-primary    placeholder:muted-foreground"

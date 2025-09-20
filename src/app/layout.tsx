@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/provider/theme-provider";
 import { GridBackground } from "@/components/ui/grid-background";
 import type { Metadata } from "next";
 import { JetBrains_Mono, Montserrat, Oxanium } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const oxanium = Oxanium({
@@ -60,16 +61,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html data-scroll-behavior="smooth" lang="pt-BR" suppressHydrationWarning>
+    <html
+      className="scroll-smooth"
+      data-scroll-behavior="smooth"
+      lang="pt-BR"
+      suppressHydrationWarning
+    >
       <body
         className={`${jetBrainsMono.variable} ${montserrat.variable} overflow-x-hidden ${oxanium} antialiased`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster />
           <GridBackground />
           <Menu />
 
