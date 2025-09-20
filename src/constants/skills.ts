@@ -117,6 +117,30 @@ export const skills = {
       icon: "/figma.svg",
       url: "https://www.figma.com",
     },
+    {
+      id: 25,
+      name: "Bun",
+      icon: "/bun.svg",
+      url: "https:/bun.sh/",
+    },
+    {
+      id: 26,
+      name: "Redux",
+      icon: "/redux.svg",
+      url: "https:/redux.js.org/",
+    },
+    {
+      id: 27,
+      name: "React Router",
+      icon: "/reactrouter.svg",
+      url: "https://reactrouter.com/",
+    },
+    {
+      id: 28,
+      name: "Tan Stack query",
+      icon: "/tanstack.svg",
+      url: "https://tanstack.com/",
+    },
   ],
   backEnd: [
     {
