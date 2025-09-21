@@ -45,7 +45,7 @@ Este é o meu portfólio pessoal desenvolvido com Next.js, React e TypeScript, a
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/ofs-portfolio.git
+   git clone https://github.com/emmanuelmarcosdeoliveira/ofs-portfolio.git
    cd ofs-portfolio
    ```
 
@@ -156,5 +156,5 @@ Released in 2025 This project is under the **MIT license**<br>
 <br>
 
 <div align="center">
-**⭐ Se este projeto foi útil para você, considere dar uma estrela!**
+<strong>⭐ Se este projeto foi útil para você, considere dar uma estrela!</strong>
 </div>
