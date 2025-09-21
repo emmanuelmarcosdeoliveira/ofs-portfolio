@@ -87,7 +87,7 @@ export const projetos: Project[] = [
     gitHub: "https://github.com/emmanuelmarcosdeoliveira/refund",
     destaque: true,
     type: "front-end",
-    technologies: ["HTML", "CSS", "JavaScript", "bun", "vite"],
+    technologies: ["html", "css", "javaScript", "bun", "vite"],
   },
 
   {

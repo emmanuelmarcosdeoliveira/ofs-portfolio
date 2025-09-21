@@ -82,18 +82,17 @@ export default async function Project({ params }: ProjectPageProps) {
           {projeto.description}
         </motion.p>
         <p className="mt-6">Tecnologias usadas nesse projeto:</p>
-        <div className=" flex flex-wrap gap-2 h-auto mt-4">
+        <motion.div
+          {...fadeUp}
+          transition={{ delay: 0.2 }}
+          className=" flex flex-wrap gap-2 h-auto mt-4"
+        >
           {projeto.technologies.map((tech, index) => (
-            <motion.div
-              className="flex flex-wrap justify-items-start"
-              key={index}
-              {...fadeRight}
-              transition={{ delay: 0.1 * index }}
-            >
+            <div className="flex flex-wrap justify-items-start" key={index}>
               <Badge>{tech}</Badge>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </motion.div>
 
         {funcionalidades > 0 && (
           <motion.div {...fadeLeft}>
